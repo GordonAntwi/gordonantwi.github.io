@@ -19,36 +19,36 @@
 <!-- SEO Rule 4: Structured data (Good for VA services) -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Antwi VA Max",
-  "jobTitle":"Executive Virtual Assistant | Operational Streamliner",
-  "email":"mailto:antwivamax@gmail.com",
-  "url":"https://gordonantwi.github.io/"
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Antwi VA Max",
+  "jobTitle":"Executive Virtual Assistant | Operational Streamliner",
+  "email":"mailto:antwivamax@gmail.com",
+  "url":"https://gordonantwi.github.io/"
 }
 </script>
 
 <style>
-  :root{
-    --primary:#3A8DFF;      /* main blue */
-    --accent:#90C2FF;       /* light blue */
-    --bg-start: #E8F4FF;    /* sky blue for about section */
-    --bg-end: #FFFFFF;      /* white */
-    --card: #FFFFFF;
-    --text: #103243;        /* deep navy-gray */
-    --muted: #516F7E;
-    --radius: 14px;
-    --maxW: 1060px;
+  :root{
+    --primary:#3A8DFF;       /* main blue */
+    --accent:#90C2FF;        /* light blue */
+    --bg-start: #E8F4FF;     /* sky blue for about section */
+    --bg-end: #FFFFFF;       /* white */
+    --card: #FFFFFF;
+    --text: #103243;         /* deep navy-gray */
+    --muted: #516F7E;
+    --radius: 14px;
+    --maxW: 1060px;
     /* 3D animation colors */
     --3d-bg: #0d0d1e;
     --3d-primary: #4f46e5; /* indigo-600 */
     --3d-accent: #c4b5fd; /* indigo-300 */
     /* Global Body Background Color */
     --body-bg: #e6f0ff; 
-  }
+  }
 
-  *{box-sizing:border-box}
-  html,body{
+  *{box-sizing:border-box}
+  html,body{
     height:100%;
     margin:0;
     font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,Arial;
@@ -56,8 +56,8 @@
     color:var(--text);
     -webkit-font-smoothing:antialiased
   }
-  a{color:var(--primary);text-decoration:none}
-  
+  a{color:var(--primary);text-decoration:none}
+  
   /* Main Content Wrapper - Centers the main page content */
   #main-content-wrapper{
     max-width:var(--maxW);
@@ -69,7 +69,7 @@
   }
   
   /* Shared Card Styling for sections */
-  .card-section{
+  .card-section{
     background:var(--card);
     border-radius:var(--radius);
     box-shadow:0 10px 30px rgba(16,50,67,0.06);
@@ -77,8 +77,8 @@
     margin-bottom: 30px; /* Space between the main content cards */
   }
 
-  /* FIXED HEADER STYLES (Significantly changed for fixed position) */
-  header{
+  /* FIXED HEADER STYLES (Significantly changed for fixed position) */
+  header{
     position: fixed;
     top: 0;
     left: 0;
@@ -93,12 +93,12 @@
     backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgba(16,50,67,0.08);
   }
-  .logo-mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-  .brand h1{margin:0;font-size:18px}
-  .brand p{margin:0;color:var(--muted);font-size:13px}
-  nav{margin-left:auto;display:flex;gap:10px;align-items:center}
-  nav a {padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted);background:transparent; transition: all 0.2s}
-  nav a:hover { background-color: var(--bg-start); color: var(--primary); }
+  .logo-mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+  .brand h1{margin:0;font-size:18px}
+  .brand p{margin:0;color:var(--muted);font-size:13px}
+  nav{margin-left:auto;display:flex;gap:10px;align-items:center}
+  nav a {padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted);background:transparent; transition: all 0.2s}
+  nav a:hover { background-color: var(--bg-start); color: var(--primary); }
 
   /* Timezone Clock Styling */
   #timezone-clock {
@@ -108,7 +108,7 @@
       margin-left: 20px; /* Separates it from the logo */
   }
 
-  /* Call to Action Button Styles - Used in header */
+  /* Call to Action Button Styles - Used in header */
   nav a.cta{
     background:var(--primary);
     color:#fff;
@@ -121,8 +121,8 @@
     color: #fff;
   }
   
-  /* HERO & 3D ANIMATION STYLES */
-  #scene-container {
+  /* HERO & 3D ANIMATION STYLES */
+  #scene-container {
     width: 100%;
     /* Added padding-top to account for the fixed header */
     padding-top: 76px; 
@@ -188,28 +188,28 @@
   }
 
 
-  /* ABOUT / LAYOUT */
-  .section-content{padding: 30px 36px 40px;}
+  /* ABOUT / LAYOUT */
+  .section-content{padding: 30px 36px 40px;}
   /* Updated two-col layout for better responsiveness */
-  .two-col{display:grid;grid-template-columns:320px 1fr;gap:28px;}
-  @media(max-width:920px){.two-col{grid-template-columns:1fr}}
-  .about-photo{width:100%;border-radius:12px;overflow:hidden}
+  .two-col{display:grid;grid-template-columns:320px 1fr;gap:28px;}
+  @media(max-width:920px){.two-col{grid-template-columns:1fr}}
+  .about-photo{width:100%;border-radius:12px;overflow:hidden}
   /* Adjusted image size for better look on small screens */
-  .about-photo img{width:100%;height:auto;aspect-ratio: 1 / 1; object-fit: cover; display:block}
-  .about h3{margin-top:0}
-  .muted{color:var(--muted);line-height:1.7}
+  .about-photo img{width:100%;height:auto;aspect-ratio: 1 / 1; object-fit: cover; display:block}
+  .about h3{margin-top:0}
+  .muted{color:var(--muted);line-height:1.7}
 
-  /* SERVICES */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  @media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:720px){.services-grid{grid-template-columns:1fr)}}
-  .svc{background:linear-gradient(180deg,#fff,#fbfdff);padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(16,50,67,0.04); transition: transform 0.3s;}
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:720px){.services-grid{grid-template-columns:1fr)}}
+  .svc{background:linear-gradient(180deg,#fff,#fbfdff);padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(16,50,67,0.04); transition: transform 0.3s;}
   .svc:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(16,50,67,0.1); }
-  .svc h4{margin:0 0 8px;color:var(--primary);font-size:1.2rem; font-weight: 700;}
-  .svc p{margin:0;color:var(--muted); font-size: 0.95rem;}
+  .svc h4{margin:0 0 8px;color:var(--primary);font-size:1.2rem; font-weight: 700;}
+  .svc p{margin:0;color:var(--muted); font-size: 0.95rem;}
 
-  /* CTA block - now integrated into a card-section */
-  .cta-block{
+  /* CTA block - now integrated into a card-section */
+  .cta-block{
     padding:30px 36px;
     display:flex;
     align-items:center;
@@ -217,9 +217,9 @@
     gap:22px;
     background: linear-gradient(90deg, #f5f8ff, #ffffff);
   }
-  @media(max-width:720px){.cta-block{flex-direction:column;align-items:flex-start}}
-  .cta-block p{margin:0;color:var(--muted)}
-  .btn{
+  @media(max-width:720px){.cta-block{flex-direction:column;align-items:flex-start}}
+  .cta-block p{margin:0;color:var(--muted)}
+  .btn{
     padding:10px 22px;
     border-radius:9999px;
     font-weight:700;
@@ -246,10 +246,10 @@
     color: white;
   }
 
-  /* NEWSLETTER */
-  .newsletter{padding:30px 36px; background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
-  .newsletter h4{margin:0 0 8px}
-  .newsletter p{margin:0 0 12px;color:var(--muted)}
+  /* NEWSLETTER */
+  .newsletter{padding:30px 36px; background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+  .newsletter h4{margin:0 0 8px}
+  .newsletter p{margin:0 0 12px;color:var(--muted)}
   
   /* --- CUSTOM CSS TO REMOVE HUBSPOT BRANDING (Per User Request) --- */
   /* This targets common classes used by HubSpot to display their logo/link */
@@ -263,17 +263,17 @@
   }
   /* ------------------------------------------------------------------- */
 
-  /* FOOTER */
-  footer{padding:20px 36px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(16,50,67,0.04)}
-  .socials{display:flex;gap:12px;justify-content:center;margin-bottom:10px}
-  .icon{width:40px;height:40px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(16,50,67,0.05);font-weight:700; transition: transform 0.2s}
+  /* FOOTER */
+  footer{padding:20px 36px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(16,50,67,0.04)}
+  .socials{display:flex;gap:12px;justify-content:center;margin-bottom:10px}
+  .icon{width:40px;height:40px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(16,50,67,0.05);font-weight:700; transition: transform 0.2s}
   .icon:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(16,50,67,0.1); }
 
-  /* spacing helpers */
-  section { padding: 40px 0; }
-  h1,h2,h3 { margin-bottom: 18px; }
-  p { margin-bottom: 14px; }
-  .small { font-size:13px;color:var(--muted); }
+  /* spacing helpers */
+  section { padding: 40px 0; }
+  h1,h2,h3 { margin-bottom: 18px; }
+  p { margin-bottom: 14px; }
+  .small { font-size:13px;color:var(--muted); }
 
   /* --- AI Assistant Specific Styles (Kept as before) --- */
   #chat-button {
@@ -390,30 +390,30 @@
 </head>
 <body>
 
-  <!-- 1. FIXED HEADER (SEO: role="banner" for site header) -->
-  <header role="banner">
-    <div style="display:flex;align-items:center;gap:14px">
-      <div class="logo-mark">AV</div>
-      <div class="brand">
-        <!-- Minor SEO: Primary brand name in H1 (smaller H1 here is fine since a large H1 is in the overlay) -->
-        <h1 id="site-title">Antwi VA Max</h1>
-        <p class="small">Executive Virtual Assistant | Operations Streamliner</p>
-      </div>
-    </div>
+  <!-- 1. FIXED HEADER (SEO: role="banner" for site header) -->
+  <header role="banner">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="logo-mark">AV</div>
+      <div class="brand">
+        <!-- Minor SEO: Primary brand name in H1 (smaller H1 here is fine since a large H1 is in the overlay) -->
+        <h1 id="site-title">Antwi VA Max</h1>
+        <p class="small">Executive Virtual Assistant | Operations Streamliner</p>
+      </div>
+    </div>
     
     <!-- NEW: Timezone Clock Container -->
     <div id="timezone-clock" class="hidden md:flex items-center gap-4 text-sm font-semibold text-gray-700 ml-4">
-        <!-- Content will be injected here by JS -->
+        <!-- Timezone content will be injected here by JS -->
     </div>
 
-    <!-- SEO: role="navigation" for main site navigation -->
-    <nav role="navigation" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#services-block">Services</a>
-      <a href="#work">Work</a>
-      <a class="cta" href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank">Book a Call</a>
-    </nav>
-  </header>
+    <!-- SEO: role="navigation" for main site navigation -->
+    <nav role="navigation" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services-block">Services</a>
+      <a href="#work">Work</a>
+      <a class="cta" href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank">Book a Call</a>
+    </nav>
+  </header>
   
 <!-- 2. TIME MAXIMIZER 3D ANIMATION CONTAINER (Full Bleed Hero) -->
 <div id="scene-container"></div>
@@ -425,7 +425,7 @@
     <p class="hero-subtext max-w-2xl font-light drop-shadow-md">
         Operational Clarity Starts Now. Antwi VA Max delivers elite **executive virtual assistant** support, turning operational chaos into high-level efficiency.
     </p>
-    <a href="#work" class="hero-cta">
+    <a href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank" class="hero-cta">
         Book Your 15-Minute Clarity Call
     </a>
 </div>
@@ -454,7 +454,7 @@
         </div>
     </section>
     
-     <!-- ===== SERVICES SECTION: ELITE PILLARS (Card 2) ===== -->
+      <!-- ===== SERVICES SECTION: ELITE PILLARS (Card 2) ===== -->
       <section id="services-block" class="card-section">
         <div class="section-content">
           <!-- SEO: Second H2, describing the service offering -->
@@ -486,7 +486,7 @@
       </section>
 
 
-     <!-- ===== ABOUT SECTION (Card 3) - UPDATED WITH PROFILE IMAGE SPACE ===== -->
+      <!-- ===== ABOUT SECTION (Card 3) - UPDATED WITH PROFILE IMAGE SPACE ===== -->
       <section id="about" class="card-section" style="background: linear-gradient(180deg, var(--bg-start), var(--bg-end)); padding: 60px 36px; font-family: 'Nunito', sans-serif; color: var(--text);">
         <div style="max-width: 900px; margin: 0 auto; padding: 0;">
           <!-- SEO: Third H2, providing background and expertise -->
@@ -494,10 +494,9 @@
           
           <!-- Profile Image and Initial Narrative using the two-column layout -->
           <div class="two-col items-start md:items-start mb-8"> 
-            <!-- Column 1: Profile Image Placeholder -->
-            <!-- NOTE: Please replace this placeholder URL with your actual image URL! -->
+            <!-- Column 1: Profile Image using the uploaded file -->
             <div class="about-photo w-64 mx-auto md:w-full md:mx-0" style="max-width: 320px;">
-              <img src="https://placehold.co/400x400/3A8DFF/ffffff?text=Antwi+Gordon+Profile+Image" alt="Professional profile of Antwi Gordon" style="border-radius: var(--radius); box-shadow: 0 10px 20px rgba(16,50,67,0.15);" />
+              <img src="me.jpg.png" alt="Professional profile of Antwi Gordon" style="border-radius: var(--radius); box-shadow: 0 10px 20px rgba(16,50,67,0.15);" onerror="this.onerror=null; this.src='https://placehold.co/400x400/3A8DFF/ffffff?text=Antwi+Gordon';" />
             </div>
             
             <!-- Column 2: Introduction Text -->
@@ -528,32 +527,32 @@
       </section>
       
       <!-- CTA block (Card 4) -->
-      <section id="work" class="card-section cta-block" aria-label="Work with me" style="margin-bottom: 30px;">
-        <div>
-          <!-- H3 is the correct sub-heading here -->
-          <h3>Ready to simplify your operations?</h3>
-          <p class="muted" style="margin-top:6px">Let’s design systems that free your time and protect your focus.</p>
-          <div class="cta-actions" style="margin-top: 15px; display: flex; gap: 16px;">
-            <a class="btn primary" href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank">Book a Discovery Call</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/antwi-gordon-02a74a271" target="_blank">Connect on LinkedIn</a>
-        </div>
-        </div>
-      </section>
+      <section id="work" class="card-section cta-block" aria-label="Work with me" style="margin-bottom: 30px;">
+        <div>
+          <!-- H3 is the correct sub-heading here -->
+          <h3>Ready to simplify your operations?</h3>
+          <p class="muted" style="margin-top:6px">Let’s design systems that free your time and protect your focus.</p>
+          <div class="cta-actions" style="margin-top: 15px; display: flex; gap: 16px;">
+            <a class="btn primary" href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank">Book a Discovery Call</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/antwi-gordon-02a74a271" target="_blank">Connect on LinkedIn</a>
+          </div>
+        </div>
+      </section>
 
-      <!-- NEWSLETTER (Card 5) -->
+      <!-- NEWSLETTER (Card 5) -->
       <section class="card-section newsletter" aria-label="Newsletter">
-        <!-- H4 is the correct sub-heading here -->
-        <h4>Join My Newsletter</h4>
-        <p>Receive calm, actionable productivity tips and workflow insights directly to your inbox.</p>
+        <!-- H4 is the correct sub-heading here -->
+        <h4>Join My Newsletter</h4>
+        <p>Receive calm, actionable productivity tips and workflow insights directly to your inbox.</p>
 
-        <!-- BEGIN: HubSpot embed (your provided snippet) - Branding hidden by CSS -->
-        <script src="https://js-eu1.hsforms.net/forms/embed/147094081.js" defer></script>
-        <div class="hs-form-frame" data-region="eu1" data-form-id="4f9aaa0f-d645-47e3-a639-d243fbcdb8e8" data-portal-id="147094081"></div>
-        <!-- END: HubSpot embed -->
+        <!-- BEGIN: HubSpot embed (your provided snippet) - Branding hidden by CSS -->
+        <script src="https://js-eu1.hsforms.net/forms/embed/147094081.js" defer></script>
+        <div class="hs-form-frame" data-region="eu1" data-form-id="4f9aaa0f-d645-47e3-a639-d243fbcdb8e8" data-portal-id="147094081"></div>
+        <!-- END: HubSpot embed -->
 
-      </section>
+      </section>
       
-      <!-- FOOTER (Card 6) -->
+      <!-- FOOTER (Card 6) -->
       <section class="card-section" style="padding: 0; margin-bottom: 0;">
         <!-- SEO: role="contentinfo" for the footer -->
         <footer role="contentinfo">
@@ -566,7 +565,7 @@
         </footer>
       </section>
 
-    </main>
+    </main>
 <!-- END MAIN CONTENT WRAPPER -->
 
 
@@ -604,14 +603,15 @@
 
 
 <script>
-// --- GLOBAL API SETTINGS ---
+// ===========================================
+// CORE AI ASSISTANT LOGIC (Retained from your code)
+// ===========================================
 const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
 const API_KEY = ""; // Canvas environment will provide the key
 const SYSTEM_PROMPT = "You are the Antwi VA Max Business Assistant, a professional, concise, and highly efficient virtual assistant. Your role is to answer user questions regarding the business, its services (Executive Time Management, Influencer Content Pipeline, Operational Systems), and operational philosophy (Calm Command). Keep answers brief and professional. Use Google Search to ground your answers in real-time information. If you cannot find the answer, politely state that you can only answer questions related to the business's services and operations and suggest they visit the full website sections.";
 let chatHistory = [];
 let isProcessing = false;
 
-// --- CHAT UI FUNCTIONS ---
 function toggleChat() {
     const modal = document.getElementById('chat-modal');
     const isVisible = modal.style.display === 'flex';
@@ -665,8 +665,6 @@ function hideLoadingIndicator() {
     }
 }
 
-// --- API & BACKOFF LOGIC ---
-
 /**
  * Robust fetch wrapper with exponential backoff for handling transient errors.
  */
@@ -709,7 +707,6 @@ async function fetchWithRetry(url, payload, maxRetries = 5) {
     throw new Error('Exhausted all retries.');
 }
 
-// --- MAIN SEND MESSAGE FUNCTION ---
 async function sendMessage() {
     if (isProcessing) return; // Prevent multiple requests
     
@@ -753,233 +750,194 @@ async function sendMessage() {
                 sources = groundingMetadata.groundingAttributions
                     .map(attribution => ({
                         uri: attribution.web?.uri,
-                        title: attribution.web?.title || attribution.uri,
+                        title: attribution.web?.title,
                     }))
-                    .filter(source => source.uri);
+                    .filter(source => source.uri && source.title); 
             }
-
+            
             // 3. Display assistant response
             displayMessage(assistantResponseText, 'assistant', sources);
             
-            // 4. Add assistant response to history
+            // 4. Update chat history for context
             chatHistory.push({ role: "model", parts: [{ text: assistantResponseText }] });
 
         } else {
-            displayMessage("I apologize, but I received an empty response. Please try rephrasing your question.", 'assistant');
-            console.error('Received unexpected response structure:', result);
+            displayMessage("I apologize, I was unable to process that request. Please try asking a different question about Antwi VA Max's services.", 'assistant');
         }
 
     } catch (error) {
+        console.error("Gemini API Request Failed:", error);
         hideLoadingIndicator();
-        // Remove the last user message from history if the API call failed completely
-        chatHistory.pop(); 
-        displayMessage("I'm sorry, I'm currently having trouble connecting to the service. Please check back later or use the contact information provided above.", 'assistant');
-        console.error("Gemini API call failed:", error);
+        displayMessage("I'm sorry, I'm currently experiencing technical difficulties. Please try again in a moment.", 'assistant');
     } finally {
         isProcessing = false;
     }
 }
 
 
-// --- TIMEZONE CLOCK FEATURE ---
+// ===========================================
+// TIMEZONE CLOCK LOGIC (New Feature)
+// ===========================================
+
 function updateTimezoneClock() {
-    const clockElement = document.getElementById('timezone-clock');
-    if (!clockElement) return;
+    const clockDiv = document.getElementById('timezone-clock');
+    if (!clockDiv) return;
 
-    // Options for consistent time display
     const options = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false,
-        timeZoneName: 'short'
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: true,
+        weekday: 'short'
     };
+    
+    // VA Timezone (Accra, Ghana - GMT/UTC)
+    const vaTimeOptions = { ...options, timeZone: 'Africa/Accra' };
+    const vaTime = new Date().toLocaleTimeString('en-US', vaTimeOptions);
+    
+    // Client Local Timezone
+    const clientTime = new Date().toLocaleTimeString('en-US', options);
 
-    // Key business timezones for executive support
-    const timezones = [
-        { zone: 'America/New_York', label: 'NY (EST)' },
-        { zone: 'Europe/London', label: 'London (GMT)' } // Ghana is also GMT/UTC
-    ];
-
-    let html = timezones.map(tz => {
-        const now = new Date();
-        // Create a dedicated formatter for the specific timezone
-        const formatter = new Intl.DateTimeFormat('en-US', { ...options, timeZone: tz.zone });
-        
-        // Format and clean up the string (removing ' GMT' or ' UTC')
-        const timeString = formatter.format(now).split(' GMT')[0].split(' UTC')[0]; 
-        
-        return `
-            <div class="flex items-center space-x-1 whitespace-nowrap">
-                <span class="text-indigo-600">
-                    <!-- Icon for Time (Clock) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </span>
-                <span class="text-gray-500 font-normal text-xs">${tz.label}:</span>
-                <span class="text-gray-900">${timeString}</span>
-            </div>
-        `;
-    }).join('<div class="w-[1px] h-4 bg-gray-200 mx-1"></div>'); // Separator
-
-    clockElement.innerHTML = html;
+    clockDiv.innerHTML = `
+        <div class="flex items-center gap-1">
+            <span class="text-indigo-600">🇬🇭</span>
+            <span class="font-bold">VA Time (Accra):</span> 
+            <span>${vaTime}</span>
+        </div>
+        <div class="flex items-center gap-1 ml-4">
+            <span class="text-gray-500">📍</span>
+            <span class="font-bold">Your Local Time:</span> 
+            <span>${clientTime}</span>
+        </div>
+    `;
 }
 
-// --- Small Runtime Replacements and Accessibility ---
-document.addEventListener('DOMContentLoaded', () => {
-    // Set the current year in the footer (Fixed ID and guaranteed DOM existence)
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+// ===========================================
+// 3D HERO ANIMATION LOGIC (New Feature)
+// ===========================================
+
+let scene, camera, renderer, particles, particleSystem, animationFrameId;
+
+function initThreeJS() {
+    const container = document.getElementById('scene-container');
+    if (!container) return;
+    
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    // 1. Scene setup
+    scene = new THREE.Scene();
+    
+    // 2. Camera setup
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    camera.position.z = 50;
+
+    // 3. Renderer setup
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(width, height);
+    container.appendChild(renderer.domElement);
+    
+    // Handle resizing
+    window.addEventListener('resize', onWindowResize, false);
+
+    // 4. Particle System (The operational clarity network)
+    const particleCount = 1000;
+    const geometry = new THREE.BufferGeometry();
+    const positions = [];
+    const colors = [];
+    const size = 0.5;
+
+    // Create a color scheme that matches the theme
+    const color1 = new THREE.Color(0x4f46e5); // Indigo
+    const color2 = new THREE.Color(0xc4b5fd); // Light Indigo
+
+    for (let i = 0; i < particleCount; i++) {
+        // Positions are randomized in a box
+        positions.push((Math.random() * 2 - 1) * 200);
+        positions.push((Math.random() * 2 - 1) * 200);
+        positions.push((Math.random() * 2 - 1) * 200);
+
+        // Assign colors based on proximity (simple gradient mix for variety)
+        const mixFactor = Math.random();
+        const finalColor = new THREE.Color();
+        finalColor.lerpColors(color1, color2, mixFactor);
+        colors.push(finalColor.r, finalColor.g, finalColor.b);
+    }
+
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    
+    const material = new THREE.PointsMaterial({
+        size: size,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending,
+    });
+
+    particleSystem = new THREE.Points(geometry, material);
+    scene.add(particleSystem);
+    
+    // Add a central, subtle light source for focus
+    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+    scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+    pointLight.position.set(0, 0, 50);
+    scene.add(pointLight);
+
+    animate();
+}
+
+function onWindowResize() {
+    const container = document.getElementById('scene-container');
+    if (!container) return;
+
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+}
+
+function animate() {
+    animationFrameId = requestAnimationFrame(animate);
+
+    // Rotate the particle system slowly to give it a sense of motion
+    if (particleSystem) {
+        particleSystem.rotation.x += 0.0005;
+        particleSystem.rotation.y += 0.001;
     }
     
-    // Accessibility: focus outline for keyboard users
-    document.addEventListener('keyup', function(e){
-        if(e.key === "Tab"){
-            document.body.classList.add('show-focus');
-        }
-    });
-
-    // Timezone Clock initialization
-    updateTimezoneClock();
-    // Update every second
-    setInterval(updateTimezoneClock, 1000);
-});
+    // Add a slow camera drift for subtle parallax effect
+    camera.position.x = Math.sin(Date.now() * 0.00005) * 5;
+    camera.position.y = Math.cos(Date.now() * 0.00005) * 5;
+    camera.lookAt(scene.position);
 
 
-// --- 3D Scene Setup (Time Maximizer Visualization) ---
-window.onload = function() {
-    const container = document.getElementById('scene-container');
-    let scene, camera, renderer, lineGroup;
-    let width = container.clientWidth;
-    let height = container.clientHeight;
+    renderer.render(scene, camera);
+}
 
-    const init = () => {
-        // Scene
-        scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x0d0d1e); 
 
-        // Camera
-        camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-        camera.position.z = 5;
+// ===========================================
+// INITIALIZATION
+// ===========================================
 
-        // Renderer
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(width, height);
-        container.appendChild(renderer.domElement);
-        
-        // Group to hold the lines and spheres
-        lineGroup = new THREE.Group();
-        scene.add(lineGroup);
-
-        // Lighting
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-        scene.add(ambientLight);
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        directionalLight.position.set(5, 5, 5);
-        scene.add(directionalLight);
-
-        createStructure();
-        window.addEventListener('resize', onWindowResize, false);
-    };
-
-    // --- Geometric Structure Creation ---
-    const createStructure = () => {
-        const numLines = 15;
-        const radius = 2;
-        const lineMaterial = new THREE.LineBasicMaterial({ 
-            color: 0x6366f1, // Primary line color (indigo)
-            linewidth: 1 
-        });
-        const pointMaterial = new THREE.MeshPhongMaterial({ 
-            color: 0xc4b5fd, // Point color (light indigo)
-            shininess: 80 
-        });
-
-        for (let i = 0; i < numLines; i++) {
-            const angle = (i / numLines) * Math.PI * 2;
-            const innerRadius = radius + Math.random() * 0.5;
-
-            // 1. Create a circular path (line)
-            const curve = new THREE.EllipseCurve(
-                0, 0, // ax, ay
-                innerRadius, innerRadius, // xRadius, yRadius
-                0, 2 * Math.PI, // aStartAngle, aEndAngle
-                false, // aClockwise
-                angle // aRotation
-            );
-            const points = curve.getPoints(100);
-            const geometry = new THREE.BufferGeometry().setFromPoints(points);
-            const orbitLine = new THREE.Line(geometry, lineMaterial);
-            
-            // Rotate the orbit line randomly to make it 3D
-            orbitLine.rotation.x = Math.random() * Math.PI;
-            orbitLine.rotation.y = Math.random() * Math.PI;
-            orbitLine.rotation.z = Math.random() * Math.PI;
-            
-            lineGroup.add(orbitLine);
-            
-            // 2. Create a "task" sphere (the moving focus point)
-            const point = new THREE.Mesh(
-                new THREE.SphereGeometry(0.05, 16, 16),
-                pointMaterial
-            );
-            
-            // Attach trajectory data to the point for animation
-            point.userData.curve = curve;
-            point.userData.timeOffset = Math.random() * 1000;
-            point.userData.speed = 0.5 + Math.random() * 0.5; // Random speed
-            point.userData.parentLine = orbitLine; // Reference to parent line
-            
-            lineGroup.add(point);
-        }
-    };
-
-    // --- Animation Loop ---
-    const animate = () => {
-        requestAnimationFrame(animate);
-
-        const time = Date.now() * 0.0001;
-
-        // 1. Rotate the entire structure slowly
-        lineGroup.rotation.y += 0.002;
-        lineGroup.rotation.x += 0.001;
-
-        // 2. Animate the points along their orbits
-        lineGroup.children.forEach(child => {
-            if (child.userData.curve) {
-                const curve = child.userData.curve;
-                const speed = child.userData.speed;
-                const timeOffset = child.userData.timeOffset;
-                const parentLine = child.userData.parentLine;
-
-                // Calculate position based on time, speed, and offset
-                const t = ((time * speed) + timeOffset) % 1;
-                const position2D = curve.getPoint(t);
-                
-                // Set 3D position based on the 2D position and the line's rotation
-                child.position.set(position2D.x, position2D.y, 0);
-
-                // Apply the line's rotation to the point's local position
-                child.position.applyEuler(parentLine.rotation);
-            }
-        });
-
-        renderer.render(scene, camera);
-    };
+function initPage() {
+    // 1. Initialize Footer Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // --- Event Handlers ---
-    const onWindowResize = () => {
-        width = container.clientWidth;
-        height = container.clientHeight;
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height);
-    };
+    // 2. Start Timezone Clock updates
+    updateTimezoneClock();
+    setInterval(updateTimezoneClock, 1000);
 
-    init();
-    animate();
-};
+    // 3. Start 3D Hero Animation
+    initThreeJS();
+}
+
+// Ensure everything runs after the window loads
+window.onload = initPage;
+
 </script>
-
 </body>
 </html>
+
+        <!-- Content will be injected here by JS -->
