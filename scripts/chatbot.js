@@ -1,42 +1,38 @@
-async function sendMessage() {
-    const inputField = document.getElementById('chat-input');
-    const userQuery = inputField.value.trim();
+// scripts/chatbot.js
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("chatForm");
+  const chatBox = document.getElementById("chatBox");
+  const input = document.getElementById("userInput");
 
-    if (!userQuery) return;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const message = input.value.trim();
+    if (!message) return;
 
-    displayMessage(userQuery, 'user');
-    inputField.value = "";
+    // Show user message in chat
+    chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+    input.value = "";
 
-    showLoadingIndicator();
+    // Send to Formspree (replace YOUR_FORM_ID with your real one)
+    try {
+      const response = await fetch("https://formspree.io/f/mblzeovd", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      });
 
-    // Step 1: Grab all visible website text
-    const siteText = document.body.innerText.toLowerCase();
-
-    // Step 2: Check if the query appears in the site content
-    const found = siteText.includes(userQuery.toLowerCase());
-
-    hideLoadingIndicator();
-
-    if (found) {
-        // Step 3A: If found on the site, reply instantly
-        displayMessage("✅ I found information related to that on the site! Please scroll or check the relevant section for more details.", "assistant");
-    } else {
-        // Step 3B: If not found, send the message to your email
-        try {
-            await fetch("https://formspree.io/f/mblzeovd, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    message: userQuery,
-                    email: "antwivamax@gmail.com"
-                })
-            });
-
-            displayMessage("📩 That information isn’t currently available on the website. I’ve sent your question to Gordon for a direct follow-up.", "assistant");
-        } catch (error) {
-            console.error("Email send failed:", error);
-            displayMessage("❌ Sorry, I couldn’t send your question right now. Please try again later.", "assistant");
-        }
+      if (response.ok) {
+        chatBox.innerHTML += `<p><em>✅ Message sent successfully!</em></p>`;
+      } else {
+        chatBox.innerHTML += `<p><em>⚠️ Error sending message.</em></p>`;
+      }
+    } catch (error) {
+      chatBox.innerHTML += `<p><em>❌ Network error.</em></p>`;
     }
-}
+
+    // Scroll to bottom automatically
+    chatBox.scrollTop = chatBox.scrollHeight;
+  });
+});
+
 
