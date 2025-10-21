@@ -741,7 +741,29 @@ async function fetchWithRetry(url, payload, maxRetries = 5) {
     throw new Error('Exhausted all retries.');
 }
 
-async function sendMessage() {
+async function sendMessage() // If assistant can't find an answer, send message to email
+if (!candidate || !candidate.content?.parts?.[0]?.text) {
+    hideLoadingIndicator();
+
+    // 1. Tell the user
+    displayMessage(
+        "🤖 That information isn't currently on the website, but I’ve sent your question to Gordon Antwi for review. You'll receive a response soon.",
+        'assistant'
+    );
+
+    // 2. Send to Formspree
+    fetch("https://formspree.io/f/mblzeovd", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            message: userQuery,
+            from: "Antwi VA Chatbot",
+        }),
+    });
+
+    return;
+}
+{
     if (isProcessing) return; // Prevent multiple requests
     
     const inputField = document.getElementById('chat-input');
