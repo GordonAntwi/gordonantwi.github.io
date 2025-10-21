@@ -937,6 +937,15 @@ function initPage() {
 window.onload = initPage;
 
 </script>
+<!-- 🧠 Chatbot Section -->
+<div id="chatBox" style="max-height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;"></div>
+<form id="chatForm" style="margin-top:10px;">
+  <input id="userInput" type="text" placeholder="Type your message..." style="width:80%; padding:5px;">
+  <button type="submit">Send</button>
+</form>
+
+<!-- Chatbot Script -->
+<script src="scripts/chatbot.js"></script>
 </body>
 </html>
 
