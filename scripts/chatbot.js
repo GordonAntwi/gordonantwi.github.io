@@ -1,58 +1,42 @@
-// Simple Chatbot Script with Email Support via Formspree
+async function sendMessage() {
+    const inputField = document.getElementById('chat-input');
+    const userQuery = inputField.value.trim();
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("chatForm");
-  const input = document.getElementById("userInput");
-  const chatBox = document.getElementById("chatBox");
+    if (!userQuery) return;
 
-  if (!form || !input || !chatBox) {
-    console.error("Chatbot elements not found. Make sure #chatForm, #userInput, and #chatBox exist.");
-    return;
-  }
+    displayMessage(userQuery, 'user');
+    inputField.value = "";
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const userMessage = input.value.trim();
-    if (!userMessage) return;
+    showLoadingIndicator();
 
-    // Display user message in chat box
-    const userBubble = document.createElement("div");
-    userBubble.className = "user-message";
-    userBubble.textContent = userMessage;
-    chatBox.appendChild(userBubble);
+    // Step 1: Grab all visible website text
+    const siteText = document.body.innerText.toLowerCase();
 
-    input.value = "";
+    // Step 2: Check if the query appears in the site content
+    const found = siteText.includes(userQuery.toLowerCase());
 
-    // Send message to Formspree
-    fetch("https://formspree.io/f/mblzeovd", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json"
-      },
-      body: new FormData(Object.assign(document.createElement("form"), {
-        elements: [
-          { name: "message", value: userMessage }
-        ]
-      }))
-    })
-      .then(response => {
-        const botReply = document.createElement("div");
-        botReply.className = "bot-message";
-        if (response.ok) {
-          botReply.textContent = "✅ Your message was sent to my email!";
-        } else {
-          botReply.textContent = "⚠️ Sorry, I couldn’t send your message.";
+    hideLoadingIndicator();
+
+    if (found) {
+        // Step 3A: If found on the site, reply instantly
+        displayMessage("✅ I found information related to that on the site! Please scroll or check the relevant section for more details.", "assistant");
+    } else {
+        // Step 3B: If not found, send the message to your email
+        try {
+            await fetch("https://formspree.io/f/mblzeovd, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    message: userQuery,
+                    email: "antwivamax@gmail.com"
+                })
+            });
+
+            displayMessage("📩 That information isn’t currently available on the website. I’ve sent your question to Gordon for a direct follow-up.", "assistant");
+        } catch (error) {
+            console.error("Email send failed:", error);
+            displayMessage("❌ Sorry, I couldn’t send your question right now. Please try again later.", "assistant");
         }
-        chatBox.appendChild(botReply);
-        chatBox.scrollTop = chatBox.scrollHeight;
-      })
-      .catch(error => {
-        const botReply = document.createElement("div");
-        botReply.className = "bot-message";
-        botReply.textContent = "❌ Error sending your message. Try again later.";
-        chatBox.appendChild(botReply);
-        chatBox.scrollTop = chatBox.scrollHeight;
-        console.error("Error:", error);
-      });
-  });
-});
+    }
+}
+
