@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio Feedback & Contact | Antwi VA Max</title>
+    <meta name="description" content="Provide direct feedback on Antwi VA Max's portfolio projects, connect for new opportunities, or send a private inquiry." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #0d1117; /* Dark background */
+            color: #f9fafb;
+        }
+        input, textarea {
+            border-color: #4b5563 !important; /* gray-600 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER/NAVBAR (Simplified) -->
+    <header class="bg-gray-900 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Home Link -->
+            <a href="index.html" class="text-xl font-extrabold text-blue-400 tracking-wider hover:text-blue-300 transition duration-300">
+                Antwi VA Max
+            </a>
+            
+            <!-- Simple Navigation Back to Home/Portfolio -->
+            <nav class="space-x-4 text-sm font-semibold">
+                <a href="index.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+                <a href="portfolio.html" class="text-blue-400 font-bold transition duration-300">Portfolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FEEDBACK FORM SECTION -->
+    <main class="py-16 md:py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-4">Portfolio Feedback & Connect</h1>
+            <p class="text-gray-400 text-lg text-center mb-6">Share your thoughts on my work or use this form to start a conversation about your project needs.</p>
+
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700">
+                <!-- Top banner image and friendly message (wider / larger) -->
+                <div class="w-full mx-auto mb-6">
+                    <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                        <img src="image2.png" alt="Thank you - I love your feedback" class="w-full h-64 md:h-96 lg:h-[420px] object-cover block" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/1200x420/0d1117/ffffff?text=Thanks+for+your+feedback';" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end">
+                            <div class="w-full text-center pb-6">
+                                <p class="mx-auto text-lg md:text-2xl lg:text-3xl font-bold text-white px-6">I love your feedback — always give it in, and anything that works very well.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="feedbackForm" class="space-y-6">
+                    <!-- Honeypot field to trap bots: humans should leave this blank -->
+                    <div class="sr-only">
+                        <label for="hp">Leave this field empty</label>
+                        <input type="text" id="hp" name="hp" autocomplete="off" />
+                    </div>
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">antwivamax@gmail.com</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">antwivamax@gmail.com</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white">
+                    </div>
+
+                    <div>
+                        <label for="website" class="block text-sm font-medium text-gray-300 mb-2">Your Company/Website (Optional)</label>
+                        <input type="url" id="website" name="website" class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message / Feedback</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white"></textarea>
+                    </div>
+
+                    <div class="space-y-4 pt-4">
+                        <p class="text-sm font-semibold text-gray-300">Choose your submission preference:</p>
+                        <p class="text-xs text-gray-400">Note: Public submissions may be moderated and displayed on this page. Private submissions are sent via your email client. Submissions that look automated will be discarded.</p>
+                        
+                        <!-- OPTION 1: Direct Message (Simulated Public Display) -->
+                        <button type="submit" data-type="public" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg text-gray-900 bg-blue-400 hover:bg-blue-300 shadow-lg transition duration-300 transform hover:scale-[1.01]">
+                            <span data-lucide="send" class="w-5 h-5 mr-2"></span> Submit to Public Feedback Wall (Appears on Website)
+                        </button>
+
+                        <!-- OPTION 2: Private Email (Mailto Link) -->
+                        <button type="button" id="sendPrivateEmail" class="w-full flex items-center justify-center px-4 py-3 border border-blue-400 text-base font-medium rounded-lg text-blue-400 bg-transparent hover:bg-gray-700 transition duration-300">
+                            <span data-lucide="mail" class="w-5 h-5 mr-2"></span> Send Privately to Email (Do Not Publish)
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- PUBLIC FEEDBACK WALL SIMULATION -->
+            <div id="feedbackWall" class="mt-12">
+                <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-2">Recent Public Feedback</h2>
+                <div id="feedbackList" class="space-y-6">
+                    <!-- Placeholder feedback items will appear here -->
+                    <div class="bg-gray-900 p-6 rounded-xl border border-gray-700">
+                        <p class="text-gray-300 italic mb-3">"The admin support case study is incredibly clear. Excellent work on the automation flow!"</p>
+                        <p class="text-sm font-semibold text-blue-400">Alex R. <span class="text-gray-500 font-normal">- From Tech Innovations</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            const form = document.getElementById('feedbackForm');
+            const feedbackList = document.getElementById('feedbackList');
+            const privateButton = document.getElementById('sendPrivateEmail');
+            const myEmail = "antwivamax@gmail.com"; // **IMPORTANT: Replace with your actual email**
+
+            // Function to handle the form submission (for public feedback)
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const website = document.getElementById('website').value;
+                const message = document.getElementById('message').value;
+
+                // Simple check for required fields
+                if (!name || !email || !message) {
+                    alert('Please fill in your Name, Email, and Message.');
+                    return;
+                }
+
+                // SIMULATION: Add the new feedback item to the public wall
+                const websiteText = website ? `- From <a href="${website}" target="_blank" class="underline hover:text-blue-300">${new URL(website).hostname}</a>` : '';
+                
+                const newFeedbackHTML = `
+                    <div class="bg-gray-900 p-6 rounded-xl border border-blue-600 animate-pulse-once">
+                        <p class="text-gray-300 italic mb-3">"${message}"</p>
+                        <p class="text-sm font-semibold text-blue-400">${name} <span class="text-gray-500 font-normal">${websiteText}</span></p>
+                    </div>
+                `;
+
+                feedbackList.insertAdjacentHTML('afterbegin', newFeedbackHTML);
+                form.reset(); // Clear the form
+
+                // Provide confirmation message instead of alert
+                alert('Thank you! Your feedback has been submitted to the public wall.');
+            });
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+
+                    const form = document.getElementById('feedbackForm');
+                    const feedbackList = document.getElementById('feedbackList');
+                    const privateButton = document.getElementById('sendPrivateEmail');
+                    const myEmail = "antwivamax@gmail.com"; // **antwvamax@gmail.com**
+                    const hpField = document.getElementById('hp'); // honeypot
+
+                    // Load persisted public feedback from localStorage
+                    const STORAGE_KEY = 'publicFeedbackList_v1';
+                    let storedFeedback = [];
+                    try {
+                        storedFeedback = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                        if (!Array.isArray(storedFeedback)) storedFeedback = [];
+                    } catch (err) {
+                        storedFeedback = [];
+                    }
+
+                    // Render the feedback list from storedFeedback plus a sample fallback
+                    function renderFeedbackList() {
+                        feedbackList.innerHTML = '';
+
+                        // Render stored items (newest first)
+                        if (storedFeedback.length) {
+                            storedFeedback.forEach(item => {
+                                const websiteText = item.website ? `- From <a href="${item.website}" target="_blank" class="underline hover:text-blue-300">${(new URL(item.website)).hostname}</a>` : '';
+                                const node = document.createElement('div');
+                                node.className = 'bg-gray-900 p-6 rounded-xl border border-blue-600';
+                                node.innerHTML = `
+                                    <p class="text-gray-300 italic mb-3">"${escapeHtml(item.message)}"</p>
+                                    <p class="text-sm font-semibold text-blue-400">${escapeHtml(item.name)} <span class="text-gray-500 font-normal">${websiteText}</span></p>
+                                `;
+                                feedbackList.appendChild(node);
+                            });
+                        }
+
+                        // Always include the example item as the last entry
+                        const sample = document.createElement('div');
+                        sample.className = 'bg-gray-900 p-6 rounded-xl border border-gray-700';
+                        sample.innerHTML = `
+                            <p class="text-gray-300 italic mb-3">"The admin support case study is incredibly clear. Excellent work on the automation flow!"</p>
+                            <p class="text-sm font-semibold text-blue-400">Alex R. <span class="text-gray-500 font-normal">- From Tech Innovations</span></p>
+                        `;
+                        feedbackList.appendChild(sample);
+                    }
+
+                    // Basic HTML-escaping helper
+                    function escapeHtml(str) {
+                        return String(str)
+                            .replace(/&/g, '&amp;')
+                            .replace(/</g, '&lt;')
+                            .replace(/>/g, '&gt;')
+                            .replace(/\"/g, '&quot;')
+                            .replace(/'/g, '&#39;');
+                    }
+
+                    renderFeedbackList();
+
+                    // Handle public feedback submission
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+
+                        // Honeypot check: if filled, treat as spam and ignore silently
+                        if (hpField && hpField.value.trim() !== '') {
+                            // Optionally log to console for local debugging
+                            console.warn('Honeypot triggered - discarding submission');
+                            return;
+                        }
+
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const website = document.getElementById('website').value.trim();
+                        const message = document.getElementById('message').value.trim();
+
+                        // Simple check for required fields
+                        if (!name || !email || !message) {
+                            alert('Please fill in your Name, Email, and Message.');
+                            return;
+                        }
+
+                        const entry = { name, email, website, message, ts: Date.now() };
+
+                        // Prepend to stored array and persist
+                        storedFeedback.unshift(entry);
+                        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(storedFeedback)); } catch (err) { console.warn('Could not persist feedback to localStorage', err); }
+
+                        // Re-render
+                        renderFeedbackList();
+                        form.reset(); // Clear the form
+
+                        // Provide confirmation message
+                        alert('Thank you! Your feedback has been submitted to the public wall.');
+                    });
+
+                    // Function to handle private email submission
+                    privateButton.addEventListener('click', function(e) {
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const website = document.getElementById('website').value.trim();
+                        const message = document.getElementById('message').value.trim();
+
+                         // Simple check for required fields
+                        if (!name || !email || !message) {
+                            alert('Please fill in your Name, Email, and Message to send a private inquiry.');
+                            return;
+                        }
+
+                        // Construct the mailto link
+                        const subject = encodeURIComponent(`Private Inquiry from Portfolio: ${name}`);
+                        let body = `Name: ${name}\\n`;
+                        body += `Email: ${email}\\n`;
+                        if (website) body += `Website: ${website}\\n`;
+                        body += `\\n---\\n\\nMessage:\\n${message}`;
+                
+                        const mailtoLink = `mailto:${myEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
+                
+                        window.location.href = mailtoLink;
+
+                        // Note: The form is NOT cleared here because the user may cancel the email send.
+                    });
+                });
+            </script>
