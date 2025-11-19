@@ -13,20 +13,20 @@
     <style>
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: #111827; /* Dark background to match hero section */
-            color: #f9fafb;
+            background-color: #ffffff;
+            color: #1f2937;
         }
         .project-card {
             transition: all 0.3s ease-in-out;
             transform: translateY(0);
         }
         .project-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
         }
     </style>
 </head>
-<body class="bg-gray-900">
+<body class="bg-white">
 
     <header class="sticky top-0 z-50 bg-gray-900 shadow-xl">
         <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
@@ -39,96 +39,102 @@
                     <a href="index.html#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
                     <a href="index.html#services" class="text-gray-300 hover:text-blue-400 transition duration-300">Services</a>
                     <a href="testimonials.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Testimonials</a>
-                    <a href="portfolio.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Portfolio</a>
+                    <a href="portfolio.html" class="text-blue-400 font-bold transition duration-300">Portfolio</a>
                     <a href="index.html#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
                 </div>
             </nav>
-
             <div class="hidden md:block flex-shrink-0">
                 <a href="index.html#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105">Let's Connect</a>
             </div>
-
             <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
                 <span data-lucide="menu"></span>
             </button>
         </div>
-
         <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-md" aria-hidden="true" role="menu">
             <a href="index.html#about" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">About</a>
             <a href="index.html#services" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Services</a>
             <a href="testimonials.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Testimonials</a>
-            <a href="portfolio.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Portfolio</a>
-            <a href="index.html#contact" class="block py-3 px-6 text-blue-400 font-bold hover:bg-gray-700">Let's Connect</a>
+            <a href="portfolio.html" class="block py-3 px-6 text-blue-400 font-bold hover:bg-gray-700">Portfolio</a>
+            <a href="index.html#contact" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Contact</a>
         </nav>
     </header>
 
+    <div class="relative w-full overflow-hidden shadow-2xl">
+        <img 
+            src="images/portfolio-hero-banner.jpg" 
+            alt="Strategic planning and technical operations data visualization banner." 
+            class="w-full h-96 lg:h-[530px] object-cover block" 
+            loading="lazy" 
+            onerror="this.onerror=null; this.src='https://placehold.co/1920x500/1f2937/f0f4f8?text=Antwi+VA+Max+Portfolio+Banner';" 
+        />
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+             <p class="text-3xl md:text-5xl font-extrabold text-white text-center p-4">Operational Excellence Delivered.</p>
+        </div>
+    </div>
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         
         <div class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold text-white mb-4">My Proven Work Portfolio</h1>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                Evidence of strategic thinking, system implementation, and results-driven execution across diverse projects. These are not just tasks—they are <span class="text-blue-400 font-semibold">Case Studies</span> in operational clarity.
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">My Proven Work Portfolio</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Evidence of strategic thinking, system implementation, and results-driven execution across diverse projects. These are not just tasks—they are <span class="text-blue-600 font-semibold">Case Studies</span> in operational clarity.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-            <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-blue-500">
-                <div class="text-4xl text-blue-400 mb-4"><i data-lucide="zap"></i></div>
-                <h2 class="text-2xl font-bold text-white mb-2">Technical Marketing Operations</h2>
-                    <p class="text-gray-400 text-sm mb-4">
-                    <span class="text-blue-400 font-semibold">Focus:</span> Email Deliverability, M365 Automation, and Cold Outreach System Setup.
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600 border border-gray-200">
+                <div class="text-4xl text-blue-600 mb-4"><span data-lucide="zap"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Technical Marketing Operations</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="text-blue-600 font-semibold">Focus:</span> Email Deliverability, M365 Automation, and Cold Outreach System Setup.
                 </p>
-                <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1 text-sm">
-                    <li>Secured <span class="text-blue-400 font-semibold">100%</span> inbox placement rate.</li>
-                    <li>Designed full <span class="text-blue-400 font-semibold">B2B Cold Outreach</span> system.</li>
-                    <li>Expert in <span class="text-blue-400 font-semibold">Domain Authentication</span> (SPF/DKIM/DMARC).</li>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Secured <span class="text-blue-600 font-semibold">100%</span> inbox placement rate.</li>
+                    <li>Designed full <span class="text-blue-600 font-semibold">B2B Cold Outreach</span> system.</li>
+                    <li>Expert in <span class="text-blue-600 font-semibold">Domain Authentication</span> (SPF/DKIM/DMARC).</li>
                 </ul>
-                <a href="tech-marketing-ops.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-500 transition duration-300 shadow-lg">
+                <a href="tech-marketing-ops.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">
                     View Full Case Study &rarr;
                 </a>
             </div>
 
-            <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-blue-500">
-                <div class="text-4xl text-blue-400 mb-4"><i data-lucide="cpu"></i></div>
-                <h2 class="text-2xl font-bold text-white mb-2">Strategic Executive Admin Support</h2>
-                    <p class="text-gray-400 text-sm mb-4">
-                    <span class="text-blue-400 font-semibold">Focus:</span> Advanced Scheduling, File Architecture, and SOP Creation for high-level management.
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600 border border-gray-200">
+                <div class="text-4xl text-blue-600 mb-4"><span data-lucide="cpu"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Strategic Executive Admin Support</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="text-blue-600 font-semibold">Focus:</span> Advanced Scheduling, File Architecture, and SOP Creation for high-level management.
                 </p>
-                <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1 text-sm">
-                    <li>Developed <span class="text-blue-400 font-semibold">SOPs</span> for quick staff onboarding.</li>
-                    <li>Implemented <span class="text-blue-400 font-semibold">cloud-based file architecture</span>.</li>
-                    <li>Managed complex <span class="text-blue-400 font-semibold">travel and calendar logistics</span>.</li>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Developed <span class="text-blue-600 font-semibold">SOPs</span> for quick staff onboarding.</li>
+                    <li>Implemented <span class="text-blue-600 font-semibold">cloud-based file architecture</span>.</li>
+                    <li>Managed complex <span class="text-blue-600 font-semibold">travel and calendar logistics</span>.</li>
                 </ul>
-                <a href="admin-support-case.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-500 transition duration-300 shadow-lg">
+                <a href="admin-support-case.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">
                     View Full Case Study &rarr;
                 </a>
             </div>
 
-            <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-blue-500">
-                <div class="text-4xl text-blue-400 mb-4"><i data-lucide="database"></i></div>
-                <h2 class="text-2xl font-bold text-white mb-2">Data Cleanup & Enrichment (Soccer Clubs)</h2>
-                    <p class="text-gray-400 text-sm mb-4">
-                    <span class="text-blue-400 font-semibold">Focus:</span> High-accuracy email verification, list segmentation, and data enrichment for targeted outreach.
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600 border border-gray-200">
+                <div class="text-4xl text-blue-600 mb-4"><span data-lucide="database"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Data Cleanup & Enrichment (Soccer Clubs)</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="text-blue-600 font-semibold">Focus:</span> High-accuracy email verification, list segmentation, and data enrichment for targeted outreach.
                 </p>
-                <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1 text-sm">
-                    <li>Achieved <span class="text-blue-400 font-semibold">100% verification rate</span> for clean emails.</li>
-                    <li>Leveraged <span class="text-blue-400 font-semibold">advanced scraping</span> techniques.</li>
-                    <li>Delivered segmented lists for <span class="text-blue-400 font-semibold">targeted marketing</span>.</li>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Achieved <span class="text-blue-600 font-semibold">100% verification rate</span> for clean emails.</li>
+                    <li>Leveraged <span class="text-blue-600 font-semibold">advanced scraping</span> techniques.</li>
+                    <li>Delivered segmented lists for <span class="text-blue-600 font-semibold">targeted marketing</span>.</li>
                 </ul>
-                <a href="data-cleanup-case.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-500 transition duration-300 shadow-lg">
+                <a href="data-cleanup-case.html" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">
                     View Full Case Study &rarr;
                 </a>
             </div>
-            
         </div>
 
         <div id="testimony-section" class="mt-20">
-            </div>
+        </div>
 
     </main>
 
-    <!-- SCROLL-TO-TOP BUTTON -->
     <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 bg-blue-600 text-white rounded-full shadow-xl transition-all duration-300 opacity-0 invisible z-50 hover:bg-blue-500 transform hover:scale-110">
         <span data-lucide="chevron-up" class="w-6 h-6"></span>
     </button>
@@ -155,7 +161,6 @@
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
         
         window.addEventListener('scroll', () => {
-            // Show button when scrolled down 500px
             if (window.scrollY > 500) {
                 scrollToTopBtn.classList.remove('opacity-0', 'invisible');
             } else {

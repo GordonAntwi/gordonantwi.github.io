@@ -10,26 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f9fafb; /* Light background for contrast sections */
-        }
-        /* Custom height for hero to ensure the section fills the screen */
-        #hero {
-            position: relative;
-            min-height: 100vh;
-        }
+    /* ... existing body styles ... */
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f9fafb; /* Light background for contrast sections */
+    }
+    
+    /* MODIFIED: This is your main hero section style */
+    #hero {
+        position: relative;
+        min-height: 100vh;
+        
+        /* 1. Set the background image and positioning */
+        background-image: url(images/hero-background.jpg); /* <-- YOUR IMAGE PATH HERE */
+        background-size: cover;          /* Ensures image covers the whole section */
+        background-position: center;     /* Centers the most important part of the image */
+        background-repeat: no-repeat;    /* Prevents the image from tiling */
 
-        /* NEW MODERN BACKGROUND STYLING */
-        .hero-background {
-            background-color: #0d1117; /* Very Dark Base */
-            /* Subtle radial gradient for depth */
-            background-image: radial-gradient(at 0% 0%, #1a222f 0%, transparent 50%),
-                              radial-gradient(at 100% 100%, #1a222f 0%, transparent 50%);
-            /* Optional: Add a subtle texture/pattern for sophistication */
-            background-blend-mode: overlay;
-        }
-    </style>
+        /* 2. Apply a dark overlay (Optional but Recommended) */
+        /* This makes the text easier to read over the image */
+        background-color: rgba(0, 0, 0, 0.4); /* Darkens the image */
+        background-blend-mode: overlay;      /* Blends the color with the image */
+        
+        /* (The 3D canvas from Three.js is still running in the background) */
+    }
+    /* You can delete the unused `.hero-background` class now */
+
+</style>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -144,10 +151,10 @@
         <div id="hero-content" class="container mx-auto text-center px-4">
                 <div class="inline-flex items-center text-sm font-bold text-blue-300 bg-gray-800 bg-opacity-70 rounded-full py-1 px-4 mb-6 uppercase tracking-wider shadow-xl mx-auto">
                 <span data-lucide="briefcase" class="w-4 h-4 mr-2"></span>
-                Executive Support | Web Solutions
+                A Problem Solver 
             </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
-                Operational Clarity for <span class="text-blue-400">High-Impact Leaders</span>
+                <h1 class="text-5xl md:text-5xl font-extrabold leading-tight mb-8">
+                Operational Clarity for High-Impact Leaders</span>
             </h1>
             
            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 mb-8 p-3 bg-gray-800 bg-opacity-70 rounded-2xl shadow-xl border border-blue-600 border-opacity-50 max-w-lg mx-auto">
@@ -174,92 +181,97 @@
     </section>
 
     <section id="about" class="section-padding bg-gray-100">
-        <div class="container mx-auto max-w-5xl">
-            
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">
-                About Me: The Calm Command Philosophy
-            </h2>
-            
-            <div class="mt-4 mb-10 text-center">
-                <p class="text-sm text-gray-600 mb-2">
-                    🎙️ Listen: A short introduction from Antwi VA Max
-                </p>
-                <audio controls class="mx-auto rounded-lg shadow-xl w-full max-w-sm">
-                    <source src="audio/antwi-intro.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element. <span class="text-blue-400 font-semibold">Please check your connection or try another browser.</span>
-                </audio>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 items-start mb-8">
-    
-    <!-- IMAGE COLUMN: Changed to span 1 column -->
-    <div class="w-full mx-auto md:w-full md:mx-0 md:col-span-1 relative">
-        <!-- MARGIN: Adjusted to push image to the left edge of its 1-column space -->
-        <img src="me.png" alt="Professional profile of Antwi Gordon" class="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-300 hover:shadow-3xl" style="min-height: 600px; object-fit: cover; max-width: 600px; margin: 0 auto 0 0;" onerror="this.onerror=null; this.src='https://placehold.co/400x400/3A8DFF/ffffff?text=Antwi+Gordon';" />
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" style="max-width: 800px; margin: 0 auto; left: 0; right: 0;"></div>
-    </div>
-    
-    <!-- TEXT COLUMN: Changed to span 2 columns -->
-    <div class="md:col-span-2 space-y-5 text-gray-700 text-lg">
-        <p>
-            My name is <strong>Antwi Gordon</strong>, I hail from Ghana, a place where hard work, warmth, and purpose shape everything we do.
-        </p>
-
-        <p>
-            My journey led me from marketing and customer service in a boutique shop to becoming an Administrative Assistant at the financial company <strong>Nyame Nanim</strong>. There, I developed a passion for organization and structure, but I sought a deeper purpose: <strong>to help others bring order and calm into their daily lives</strong>.
-        </p>
-
-        <p>
-            I spent years researching <strong>time management</strong>, only to discover a more powerful truth: I discovered that <strong>time holds no eternity</strong>, yet within it, <strong>I can create the best of moments</strong> — a truth that guided me toward becoming an <strong>Executive Virtual Assistant </strong>—a role that combines my foundation in operations, service, and strategic thinking.
-        </p>
-    </div>
-</div>
-            
-            <div class="mt-8 pt-6 border-t border-gray-300">
-                <p class="text-gray-700 text-lg mb-6">
-                    Today, I dedicate my work to helping <strong>founders, CEOs, and business owners</strong> find peace in their operations. Every task I take on carries <strong>integrity, trust, and heart</strong>, because I believe that real success isn't just in achieving more—it’s in achieving it <strong>calmly and with operational clarity.</strong>
-                </p>
-
-                <p class="text-xl font-extrabold text-center text-blue-600 mt-6">
-                    What started as a search for how to manage time has become my purpose — to help others make time work beautifully for them. 🌱
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="services" class="section-padding bg-white">
-        <div class="container mx-auto">
-    
-            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">My Dual Expertise</h2>
-                <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto px-4">
-                Combining high-level administrative support with professional technical execution.
+    <div class="container mx-auto max-w-5xl">
+        
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">
+            About Me: The Calm Command Philosophy
+        </h2>
+        
+        <div class="mt-4 mb-10 text-center">
+            <p class="text-sm text-gray-600 mb-2">
+                🎙️ Listen: A short introduction from Antwi VA Max
             </p>
+            <audio controls class="mx-auto rounded-lg shadow-xl w-full max-w-sm">
+                <source src="audio/antwi-intro.mp3" type="audio/mpeg">
+                Your browser does not support the audio element. <span class="text-blue-400 font-semibold">Please check your connection or try another browser.</span>
+            </audio>
+        </div>
 
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="p-8 bg-gray-50 rounded-2xl shadow-xl border-t-4 border-blue-600 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <span data-lucide="rocket" class="w-10 h-10"></span>
-                    </div>
-                    <h3 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Executive Virtual Assistance</h3>
-                    <p class="text-gray-600 mb-6 font-semibold">
-                        Strategic time management, advanced automation, and seamless operational flow for CEOs and founders.
+        <div class="grid md:grid-cols-3 gap-8 items-start mb-8">
+
+            <div class="w-full mx-auto md:w-full md:mx-0 md:col-span-1 relative">
+                <img src="me.png" alt="Professional profile of Antwi Gordon" class="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-300 hover:shadow-3xl" style="min-height: 600px; object-fit: cover; max-width: 600px; margin: 0 auto 0 0;" onerror="this.onerror=null; this.src='https://placehold.co/400x400/3A8DFF/ffffff?text=Antwi+Gordon';" />
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" style="max-width: 800px; margin: 0 auto; left: 0; right: 0;"></div>
+            </div>
+            
+            <div class="md:col-span-2 space-y-5 text-gray-700 text-lg">
+                <p>
+                    My name is <strong>Antwi Gordon</strong>, I hail from Ghana, a place where hard work, warmth, and purpose shape everything we do.
+                </p>
+
+                <p>
+                    My journey led me from marketing and customer service in a boutique shop to becoming an Administrative Assistant at the financial company <strong>Nyame Nanim</strong>. There, I developed a passion for organization and structure, but I sought a deeper purpose: <strong>to help others bring order and calm into their daily lives</strong>.
+                </p>
+
+                <p>
+                    I spent years researching <strong>time management</strong>, only to discover a more powerful truth: I discovered that <strong>time holds no eternity</strong>, yet within it, <strong>I can create the best of moments</strong> — a truth that guided me toward becoming an <strong>Executive Virtual Assistant </strong>—a role that combines my foundation in operations, service, and strategic thinking.
+                </p>
+                <div class="my-8 p-6 bg-blue-50 border-l-4 border-blue-600 rounded-lg shadow-md text-gray-800">
+                    <p class="text-xl font-extrabold mb-3 text-blue-800 flex items-center">
+                        <span data-lucide="zap" class="w-6 h-6 mr-3 flex-shrink-0"></span>
+                        FULL-TIME FREELANCER
                     </p>
-                    <ul class="space-y-3 text-gray-700 text-lg">
-                        <li class="flex items-start">
-                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
-                            Advanced Calendar & Email Triage
-                        </li>
-                        <li class="flex items-start">
-                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
-                            Systems & Process Automation
-                        </li>
-                        <li class="flex items-start">
-                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
-                            Project Coordination & Task Delegation
-                        </li>
-                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        This is not a side hustle, it's a <strong>full-time priority</strong>, handled with <strong>focus, consistency, and complete dedication</strong>. 
+                        I take ownership from day one—meeting deadlines, solving challenges proactively, and delivering with <strong>accountability</strong>.
+                    </p>
                 </div>
+            </div>
+        </div> 
+        <div class="mt-8 pt-6 border-t border-gray-300 mb-16">
+            <p class="text-gray-700 text-lg mb-6">
+                Today, I dedicate my work to helping <strong>founders, CEOs, and business owners</strong> find peace in their operations. Every task I take on carries <strong>integrity, trust, and heart</strong>, because I believe that real success isn't just in achieving more—it’s in achieving it <strong>calmly and with operational clarity.</strong>
+            </p>
+            <p class="text-xl font-extrabold text-center text-blue-600">
+                What started as a search for how to manage time has become my purpose — to help others make time work. 🌱
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="services" class="section-padding bg-white">
+    <div class="container mx-auto">
+
+        <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">My Dual Expertise</h2>
+        <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto px-4">
+            Combining high-level administrative support with professional technical execution.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="p-8 bg-gray-50 rounded-2xl shadow-xl border-t-4 border-blue-600 hover:shadow-2xl transition duration-300">
+                <div class="text-blue-600 mb-4">
+                    <span data-lucide="rocket" class="w-10 h-10"></span>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Executive Virtual Assistance</h3>
+                <p class="text-gray-600 mb-6 font-semibold">
+                    Strategic time management, advanced automation, and seamless operational flow for CEOs and founders.
+                </p>
+                <ul class="space-y-3 text-gray-700 text-lg">
+                    <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Advanced Calendar & Email Triage
+                    </li>
+                    <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Systems & Process Automation
+                    </li>
+                    <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Project Coordination & Task Delegation
+                    </li>
+                </ul>
+            </div>
 
                 <div class="p-8 bg-gray-50 rounded-2xl shadow-xl border-t-4 border-blue-600 hover:shadow-2xl transition duration-300">
                     <div class="text-blue-600 mb-4">
@@ -947,8 +959,6 @@
             updateTimezoneClock(); // Show time immediately
             setInterval(updateTimezoneClock, 1000); // Update every second
             
-            // 3. Start 3D Hero Animation
-            initThreeJS();
 
             // 4. Initialize Chatbot Listener
             chatForm.addEventListener('submit', handleChatSubmission);

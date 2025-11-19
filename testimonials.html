@@ -11,52 +11,82 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray background */
-            color: #1f2937;
-        }
-        .primary-color-text { color: #2563eb; } /* Blue-600 */
-        .section-padding { padding: 4rem 1.5rem; }
-    </style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f0f4f8; /* Light blue-gray background */
+        color: #1f2937;
+    }
+    
+    /* === NEW CSS FOR HERO IMAGE === */
+    .testimonial-hero-bg {
+        /* 1. Set the image and sizing */
+        background-image: url(images/test-hero.jpg); /* <-- REPLACE WITH YOUR FILENAME */
+        background-size: cover;          /* Ensures the image covers the whole area */
+        background-position: center;     /* Centers the most important part of the image */
+        background-repeat: no-repeat;    /* Prevents tiling */
+        
+        /* 🔥 THE LINE TO ADD: Sets the height for a large banner */
+        min-height: 520px; /* Adjust this value (e.g., 300px, 500px, 600px) as needed */
+        
+        /* 2. Apply a Dark Overlay (Crucial for text readability) */
+        background-color: rgba(0, 0, 0, 0.5); /* Sets the dark base color */
+        background-blend-mode: overlay;      /* Blends the dark color with the image */
+    }
+    
+    /* Optional: Add a subtle text shadow for better contrast */
+    .shadow-text {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+</style>
 </head>
 <body class="antialiased">
 
-    <main class="container mx-auto px-4 py-8">
-        
-        <header class="sticky top-0 z-50 bg-gray-900 shadow-xl">
-            <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
-                <a href="index.html" class="text-2xl font-extrabold text-white flex items-center tracking-wider flex-shrink-0">
-                    <span data-lucide="zap" class="w-6 h-6 mr-2 text-blue-400"></span>
-                    ANTWI VA MAX
-                </a>
-                <nav class="hidden md:flex flex-grow justify-center">
-                    <div class="space-x-6 text-sm font-semibold">
-                        <a href="index.html#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
-                        <a href="index.html#services" class="text-gray-300 hover:text-blue-400 transition duration-300">Services</a>
-                        <a href="testimonials.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Testimonials</a>
-                        <a href="portfolio.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Portfolio</a>
-                        <a href="index.html#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
-                    </div>
-                </nav>
-
-                <div class="hidden md:block flex-shrink-0">
-                    <a href="index.html#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105">Let's Connect</a>
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
+            <a href="index.html" class="text-2xl font-extrabold text-white flex items-center tracking-wider flex-shrink-0">
+                <span data-lucide="zap" class="w-6 h-6 mr-2 text-blue-400"></span>
+                ANTWI VA MAX
+            </a>
+            <nav class="hidden md:flex flex-grow justify-center">
+                <div class="space-x-6 text-sm font-semibold">
+                    <a href="index.html#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
+                    <a href="index.html#services" class="text-gray-300 hover:text-blue-400 transition duration-300">Services</a>
+                    <a href="testimonials.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Testimonials</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-blue-400 transition duration-300">Portfolio</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
                 </div>
+            </nav>
 
-                <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
-                    <span data-lucide="menu"></span>
-                </button>
+            <div class="hidden md:block flex-shrink-0">
+                <a href="index.html#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105">Let's Connect</a>
             </div>
 
-            <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-md" aria-hidden="true" role="menu">
-                <a href="index.html#about" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">About</a>
-                <a href="index.html#services" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Services</a>
-                <a href="testimonials.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Testimonials</a>
-                <a href="portfolio.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Portfolio</a>
-                <a href="index.html#contact" class="block py-3 px-6 text-blue-400 font-bold hover:bg-gray-700">Let's Connect</a>
-            </nav>
-        </header>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span data-lucide="menu"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 shadow-md" aria-hidden="true" role="menu">
+            <a href="index.html#about" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">About</a>
+            <a href="index.html#services" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Services</a>
+            <a href="testimonials.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Testimonials</a>
+            <a href="portfolio.html" class="block py-3 px-6 text-gray-200 hover:bg-gray-700">Portfolio</a>
+            <a href="index.html#contact" class="block py-3 px-6 text-blue-400 font-bold hover:bg-gray-700">Let's Connect</a>
+        </nav>
+    </header>
+
+    <div class="testimonial-hero-bg h-96 flex items-center justify-center">
+        <div class="text-center p-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4 shadow-text">
+                Client Success Stories
+            </h1>
+            <p class="text-xl text-gray-200 font-medium">
+                Proof of Operational Clarity and Excellence.
+            </p>
+        </div>
+    </div>
+    
+    <main class="container mx-auto px-4 py-8">
 
         <section class="section-padding pt-0 text-center">
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
