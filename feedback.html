@@ -69,13 +69,13 @@
                     </div>
                     
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                        <input type="text" id="name" name="name" required class="w-full p-3 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500">
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">antwivamax@gmail.com</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white">
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
-                        <input type="email" id="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500">
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">antwivamax@gmail.com</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 bg-gray-900 border rounded-lg focus:ring-blue-400 focus:border-blue-400 placeholder-gray-500 text-white">
                     </div>
 
                     <div>
@@ -119,26 +119,166 @@
     <script>
         if (typeof lucide !== 'undefined') lucide.createIcons();
 
-        const form = document.getElementById('feedbackForm');
-        const submitPublic = document.getElementById('submitPublic');
-        const submitPrivate = document.getElementById('submitPrivate');
-        const submissionType = document.getElementById('submissionType');
+            const form = document.getElementById('feedbackForm');
+            const feedbackList = document.getElementById('feedbackList');
+            const privateButton = document.getElementById('sendPrivateEmail');
+            const myEmail = "antwivamax@gmail.com"; // **IMPORTANT: Replace with your actual email**
 
-        // Functionality to handle which button was clicked
-        submitPublic.addEventListener('click', () => {
-            submissionType.value = 'public'; // Set hidden field value to 'public'
-            // NOTE: For a real "Public Wall", you would need server-side code (PHP/Node) and a database.
-            // When using Formspree, the form submission will still land in your email, 
-            // but the '_submission_type' field will tell you the user intended it to be public.
-        });
+            // Function to handle the form submission (for public feedback)
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-        submitPrivate.addEventListener('click', () => {
-            submissionType.value = 'private'; // Set hidden field value to 'private'
-        });
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const website = document.getElementById('website').value;
+                const message = document.getElementById('message').value;
 
-        // Optional: Add basic form feedback/redirection handling here if Formspree is used
-        // Formspree typically handles the redirection via the hidden '_next' field, 
-        // so no extra JS is usually needed for submission success.
-    </script>
-</body>
-</html>
+                // Simple check for required fields
+                if (!name || !email || !message) {
+                    alert('Please fill in your Name, Email, and Message.');
+                    return;
+                }
+
+                // SIMULATION: Add the new feedback item to the public wall
+                const websiteText = website ? `- From <a href="${website}" target="_blank" class="underline hover:text-blue-300">${new URL(website).hostname}</a>` : '';
+                
+                const newFeedbackHTML = `
+                    <div class="bg-gray-900 p-6 rounded-xl border border-blue-600 animate-pulse-once">
+                        <p class="text-gray-300 italic mb-3">"${message}"</p>
+                        <p class="text-sm font-semibold text-blue-400">${name} <span class="text-gray-500 font-normal">${websiteText}</span></p>
+                    </div>
+                `;
+
+                feedbackList.insertAdjacentHTML('afterbegin', newFeedbackHTML);
+                form.reset(); // Clear the form
+
+                // Provide confirmation message instead of alert
+                alert('Thank you! Your feedback has been submitted to the public wall.');
+            });
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+
+                    const form = document.getElementById('feedbackForm');
+                    const feedbackList = document.getElementById('feedbackList');
+                    const privateButton = document.getElementById('sendPrivateEmail');
+                    const myEmail = "antwivamax@gmail.com"; // **antwvamax@gmail.com**
+                    const hpField = document.getElementById('hp'); // honeypot
+
+                    // Load persisted public feedback from localStorage
+                    const STORAGE_KEY = 'publicFeedbackList_v1';
+                    let storedFeedback = [];
+                    try {
+                        storedFeedback = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                        if (!Array.isArray(storedFeedback)) storedFeedback = [];
+                    } catch (err) {
+                        storedFeedback = [];
+                    }
+
+                    // Render the feedback list from storedFeedback plus a sample fallback
+                    function renderFeedbackList() {
+                        feedbackList.innerHTML = '';
+
+                        // Render stored items (newest first)
+                        if (storedFeedback.length) {
+                            storedFeedback.forEach(item => {
+                                const websiteText = item.website ? `- From <a href="${item.website}" target="_blank" class="underline hover:text-blue-300">${(new URL(item.website)).hostname}</a>` : '';
+                                const node = document.createElement('div');
+                                node.className = 'bg-gray-900 p-6 rounded-xl border border-blue-600';
+                                node.innerHTML = `
+                                    <p class="text-gray-300 italic mb-3">"${escapeHtml(item.message)}"</p>
+                                    <p class="text-sm font-semibold text-blue-400">${escapeHtml(item.name)} <span class="text-gray-500 font-normal">${websiteText}</span></p>
+                                `;
+                                feedbackList.appendChild(node);
+                            });
+                        }
+
+                        // Always include the example item as the last entry
+                        const sample = document.createElement('div');
+                        sample.className = 'bg-gray-900 p-6 rounded-xl border border-gray-700';
+                        sample.innerHTML = `
+                            <p class="text-gray-300 italic mb-3">"The admin support case study is incredibly clear. Excellent work on the automation flow!"</p>
+                            <p class="text-sm font-semibold text-blue-400">Alex R. <span class="text-gray-500 font-normal">- From Tech Innovations</span></p>
+                        `;
+                        feedbackList.appendChild(sample);
+                    }
+
+                    // Basic HTML-escaping helper
+                    function escapeHtml(str) {
+                        return String(str)
+                            .replace(/&/g, '&amp;')
+                            .replace(/</g, '&lt;')
+                            .replace(/>/g, '&gt;')
+                            .replace(/\"/g, '&quot;')
+                            .replace(/'/g, '&#39;');
+                    }
+
+                    renderFeedbackList();
+
+                    // Handle public feedback submission
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+
+                        // Honeypot check: if filled, treat as spam and ignore silently
+                        if (hpField && hpField.value.trim() !== '') {
+                            // Optionally log to console for local debugging
+                            console.warn('Honeypot triggered - discarding submission');
+                            return;
+                        }
+
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const website = document.getElementById('website').value.trim();
+                        const message = document.getElementById('message').value.trim();
+
+                        // Simple check for required fields
+                        if (!name || !email || !message) {
+                            alert('Please fill in your Name, Email, and Message.');
+                            return;
+                        }
+
+                        const entry = { name, email, website, message, ts: Date.now() };
+
+                        // Prepend to stored array and persist
+                        storedFeedback.unshift(entry);
+                        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(storedFeedback)); } catch (err) { console.warn('Could not persist feedback to localStorage', err); }
+
+                        // Re-render
+                        renderFeedbackList();
+                        form.reset(); // Clear the form
+
+                        // Provide confirmation message
+                        alert('Thank you! Your feedback has been submitted to the public wall.');
+                    });
+
+                    // Function to handle private email submission
+                    privateButton.addEventListener('click', function(e) {
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const website = document.getElementById('website').value.trim();
+                        const message = document.getElementById('message').value.trim();
+
+                         // Simple check for required fields
+                        if (!name || !email || !message) {
+                            alert('Please fill in your Name, Email, and Message to send a private inquiry.');
+                            return;
+                        }
+
+                        // Construct the mailto link
+                        const subject = encodeURIComponent(`Private Inquiry from Portfolio: ${name}`);
+                        let body = `Name: ${name}\\n`;
+                        body += `Email: ${email}\\n`;
+                        if (website) body += `Website: ${website}\\n`;
+                        body += `\\n---\\n\\nMessage:\\n${message}`;
+                
+                        const mailtoLink = `mailto:${myEmail}?subject=${subject}&body=${encodeURIComponent(body)}`;
+                
+                        window.location.href = mailtoLink;
+
+                        // Note: The form is NOT cleared here because the user may cancel the email send.
+                    });
+                });
+            </script>
