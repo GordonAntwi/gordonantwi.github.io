@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials | Antwi VA Max</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f0f4f8; /* Light blue-gray background */
+        color: #1f2937;
+    }
+    
+    /* === NEW CSS FOR HERO IMAGE === */
+    .testimonial-hero-bg {
+        /* 1. Set the image and sizing */
+        background-image: url(images/test-hero.jpg); /* <-- REPLACE WITH YOUR FILENAME */
+        background-size: cover;          /* Ensures the image covers the whole area */
+        background-position: center;     /* Centers the most important part of the image */
+        background-repeat: no-repeat;    /* Prevents tiling */
+        
+        /* 🔥 THE LINE TO ADD: Sets the height for a large banner */
+        min-height: 520px; /* Adjust this value (e.g., 300px, 500px, 600px) as needed */
+        
+        /* 2. Apply a Dark Overlay (Crucial for text readability) */
+        background-color: rgba(0, 0, 0, 0.5); /* Sets the dark base color */
+        background-blend-mode: overlay;      /* Blends the dark color with the image */
+    }
+    
+    /* Optional: Add a subtle text shadow for better contrast */
+    .shadow-text {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+</style>
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
+            <a href="index.html" class="text-2xl font-extrabold text-white flex items-center tracking-wider flex-shrink-0">
+                <span data-lucide="zap" class="w-6 h-6 mr-2 text-yellow-300"></span>
+                ANTWI VA MAX
+            </a>
+            <nav class="hidden md:flex flex-grow justify-center">
+                <div class="space-x-6 text-sm font-semibold">
+                    <a href="index.html#about" class="text-yellow-100 hover:text-yellow-300 transition duration-300">About</a>
+                    <a href="index.html#services" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Services</a>
+                    <a href="testimonials.html" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Testimonials</a>
+                    <a href="portfolio.html" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Portfolio</a>
+                    <a href="index.html#contact" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Contact</a>
+                </div>
+            </nav>
+
+            <div class="hidden md:block flex-shrink-0">
+                <a href="index.html#contact" class="px-4 py-2 bg-gradient-to-r text-white" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4) text-blue-900 font-bold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105">Let's Connect</a>
+            </div>
+
+            <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span data-lucide="menu"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-blue-700 to-indigo-600 shadow-md" aria-hidden="true" role="menu">
+            <a href="index.html#about" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">About</a>
+            <a href="index.html#services" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Services</a>
+            <a href="testimonials.html" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Testimonials</a>
+            <a href="portfolio.html" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Portfolio</a>
+            <a href="index.html#contact" class="block py-3 px-6 text-yellow-300 font-bold hover:bg-gray-700">Let's Connect</a>
+        </nav>
+    </header>
+
+    <div class="testimonial-hero-bg h-96 flex items-center justify-center">
+        <div class="text-center p-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-4 shadow-text">
+                Client Success Stories
+            </h1>
+            <p class="text-xl text-gray-200 font-medium">
+                Proof of Operational Clarity and Excellence.
+            </p>
+        </div>
+    </div>
+    
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="section-padding pt-0 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                Client & Colleague Confidence
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                Real feedback on <span class="text-yellow-300 font-semibold">operational clarity</span>, dedication, and technical expertise.
+            </p>
+
+            <div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto items-stretch">
+                <!-- Testimonial Card: Joanne -->
+                <article class="p-8 bg-white rounded-2xl shadow-2xl border-t-8 border-blue-500 flex flex-col items-center h-full">
+                    <div class="w-24 h-24 mb-6 rounded-full bg-gray-200 border-4 border-blue-200 hover:border-blue-300 transition-colors duration-300 flex items-center justify-center overflow-hidden shadow-md">
+                        <img src="images/Joanne P.png" alt="Joanne P." class="w-full h-full object-cover object-center" loading="lazy">
+                    </div>
+                    <span data-lucide="quote" class="w-8 h-8 text-blue-500 mb-4"></span>
+
+                    <p class="text-lg italic text-gray-700 mb-6">
+                        "Antwi has helped me manage daily content for my Facebook page, and working with him has been a smooth experience. He also goes the extra mile on every task. His support in Social Media Management & General VA work has been a big help. I'm glad to recommend him!"
+                    </p>
+
+                    <div class="text-center mt-auto">
+                        <p class="text-xl font-bold primary-color-text">Joanne P.</p>
+                        <p class="text-md text-gray-500">Executive Assistant</p>
+                    </div>
+                </article>
+
+                <!-- Testimonial Card: Prisca -->
+                <article class="p-8 bg-white rounded-2xl shadow-2xl border-t-8 border-blue-500 flex flex-col items-center h-full">
+                    <div class="w-24 h-24 mb-6 rounded-full bg-gray-200 border-4 border-blue-200 hover:border-blue-300 transition-colors duration-300 flex items-center justify-center overflow-hidden shadow-md">
+                        <img src="images/prisca-ifediba-photo.png" alt="Prisca Ifediba A." class="w-full h-full object-cover object-center" loading="lazy">
+                    </div>
+                    <span data-lucide="quote" class="w-8 h-8 text-blue-500 mb-4"></span>
+
+                    <p class="text-lg italic text-gray-700 mb-6">
+                        "Antwi combines relentless discipline and creative leadership with world‑class automation skills, delivering calm operational excellence that advances results."
+                    </p>
+
+                    <div class="text-center mt-auto">
+                        <p class="text-xl font-bold primary-color-text">Prisca Ifediba A.</p>
+                        <p class="text-md text-gray-500">Social Media Content Writer (Dexa)</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCROLL-TO-TOP BUTTON -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 bg-gradient-to-r text-white" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4) text-blue-900 font-bold rounded-full shadow-xl transition-all duration-300 opacity-0 invisible z-50 hover:bg-blue-500 transform hover:scale-110">
+        <span data-lucide="chevron-up" class="w-6 h-6"></span>
+    </button>
+
+    <footer class="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-white py-8">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-4 text-yellow-100 text-sm">Antwi VA Max | Operational Clarity</p>
+            <div class="flex justify-center space-x-6 text-yellow-100">
+                <a href="index.html#about" class="hover:text-yellow-300 text-sm">About</a>
+                <a href="index.html#services" class="hover:text-yellow-300 text-sm">Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 text-sm">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-yellow-300 text-sm">Testimonials</a>
+                <a href="index.html#contact" class="hover:text-yellow-300 text-sm">Contact</a>
+            </div>
+            <p class="mt-4 text-xs text-gray-500">&copy; <span id="current-year">2025</span> Antwi VA Max. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            // Show button when scrolled down 500px
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Functionality
+        (function(){
+            const btn = document.getElementById('menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function(){
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('hidden');
+                menu.setAttribute('aria-hidden', String(isOpen));
+                const icon = btn.querySelector('[data-lucide]');
+                if (icon) icon.setAttribute('data-lucide', isOpen ? 'menu' : 'x');
+                if (!isOpen) { const f = menu.querySelector('a'); if (f) f.focus(); }
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){
+                    btn.setAttribute('aria-expanded','false');
+                    menu.classList.add('hidden');
+                    menu.setAttribute('aria-hidden','true');
+                    btn.focus();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+

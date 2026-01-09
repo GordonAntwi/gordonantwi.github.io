@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Antwi VA Max | Portfolio of Work Samples & Case Studies</title>
+    <meta name="description" content="A detailed portfolio showcasing expertise in Technical Marketing Operations, Executive Admin Support, and Data Cleanup for Antwi VA Max." />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        .project-card {
+            transition: all 0.3s ease-in-out;
+            transform: translateY(0);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
+            <a href="index.html" class="text-2xl font-extrabold text-white flex items-center tracking-wider flex-shrink-0">
+                <span data-lucide="zap" class="w-6 h-6 mr-2 text-yellow-300"></span>
+                ANTWI VA MAX
+            </a>
+            <nav class="hidden md:flex flex-grow justify-center">
+                <div class="space-x-6 text-sm font-semibold">
+                    <a href="index.html#about" class="text-yellow-100 hover:text-yellow-300 transition duration-300">About</a>
+                    <a href="index.html#services" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Services</a>
+                    <a href="testimonials.html" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Testimonials</a>
+                    <a href="portfolio.html" class="text-yellow-300 font-bold transition duration-300">Portfolio</a>
+                    <a href="index.html#contact" class="text-yellow-100 hover:text-yellow-300 transition duration-300">Contact</a>
+                </div>
+            </nav>
+            <div class="hidden md:block flex-shrink-0">
+                <a href="index.html#contact" class="px-4 py-2 rounded-lg text-white font-bold shadow-md hover:opacity-95 transition duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">Let's Connect</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span data-lucide="menu"></span>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-blue-700 to-indigo-600 shadow-md" aria-hidden="true" role="menu">
+            <a href="index.html#about" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">About</a>
+            <a href="index.html#services" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Services</a>
+            <a href="testimonials.html" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Testimonials</a>
+            <a href="portfolio.html" class="block py-3 px-6 text-yellow-300 font-bold hover:bg-gray-700">Portfolio</a>
+            <a href="index.html#contact" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Contact</a>
+        </nav>
+    </header>
+
+    <div class="relative w-full overflow-hidden shadow-2xl">
+        <img 
+            src="images/portfolio-hero-banner.jpg" 
+            alt="Strategic planning and technical operations data visualization banner." 
+            class="w-full h-96 lg:h-[530px] object-cover block" 
+            loading="lazy" 
+            onerror="this.onerror=null; this.src='https://placehold.co/1920x500/1f2937/f0f4f8?text=Antwi+VA+Max+Portfolio+Banner';" 
+        />
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+             <p class="text-3xl md:text-5xl font-extrabold text-white text-center p-4">Operational Excellence Delivered.</p>
+        </div>
+    </div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-4">My Proven Work Portfolio</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Evidence of strategic thinking, system implementation, and results-driven execution across diverse projects. These are not just tasks—they are <span class="font-semibold" style="color: #0FB9B1">Case Studies</span> in operational clarity.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-opacity-20 border-emerald-600" style="border-color: #0FB9B1;">
+                <div class="text-4xl mb-4" style="color: #0FB9B1"><span data-lucide="zap"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Technical Marketing Operations</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="font-semibold" style="color: #0FB9B1">Focus:</span> Email Deliverability, M365 Automation, and Cold Outreach System Setup.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Secured <span class="font-semibold" style="color: #0FB9B1">100%</span> inbox placement rate.</li>
+                    <li>Designed full <span class="font-semibold" style="color: #0FB9B1">B2B Cold Outreach</span> system.</li>
+                    <li>Expert in <span class="font-semibold" style="color: #0FB9B1">Domain Authentication</span> (SPF/DKIM/DMARC).</li>
+                </ul>
+                <a href="tech-marketing-ops.html" target="_blank" class="inline-block py-2 px-6 rounded-full text-white font-bold shadow-lg transition duration-300 hover:opacity-95" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">
+                    View Full Case Study &rarr;
+                </a>
+            </div>
+
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-opacity-20 border-emerald-600" style="border-color: #0FB9B1;">
+                <div class="text-4xl mb-4" style="color: #0FB9B1"><span data-lucide="cpu"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Strategic Executive Admin Support</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="font-semibold" style="color: #0FB9B1">Focus:</span> Advanced Scheduling, File Architecture, and SOP Creation for high-level management.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Developed <span class="font-semibold" style="color: #0FB9B1">SOPs</span> for quick staff onboarding.</li>
+                    <li>Implemented <span class="font-semibold" style="color: #0FB9B1">cloud-based file architecture</span>.</li>
+                    <li>Managed complex <span class="font-semibold" style="color: #0FB9B1">travel and calendar logistics</span>.</li>
+                </ul>
+                <a href="admin-support-case.html" target="_blank" class="inline-block py-2 px-6 rounded-full text-white font-bold shadow-lg transition duration-300 hover:opacity-95" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">
+                    View Full Case Study &rarr;
+                </a>
+            </div>
+
+            <div class="project-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-opacity-20 border-emerald-600" style="border-color: #0FB9B1;">
+                <div class="text-4xl mb-4" style="color: #0FB9B1"><span data-lucide="database"></span></div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Data Cleanup & Enrichment (Soccer Clubs)</h2>
+                <p class="text-gray-600 text-sm mb-4">
+                    <span class="font-semibold" style="color: #0FB9B1">Focus:</span> High-accuracy email verification, list segmentation, and data enrichment for targeted outreach.
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1 text-sm">
+                    <li>Achieved <span class="font-semibold" style="color: #0FB9B1">100% verification rate</span> for clean emails.</li>
+                    <li>Leveraged <span class="font-semibold" style="color: #0FB9B1">advanced scraping</span> techniques.</li>
+                    <li>Delivered segmented lists for <span class="font-semibold" style="color: #0FB9B1">targeted marketing</span>.</li>
+                </ul>
+                <a href="data-cleanup-case.html" target="_blank" class="inline-block py-2 px-6 rounded-full text-white font-bold shadow-lg transition duration-300 hover:opacity-95" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">
+                    View Full Case Study &rarr;
+                </a>
+            </div>
+        </div>
+
+        <div id="testimony-section" class="mt-20">
+        </div>
+
+    </main>
+
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 bg-gradient-to-r text-white" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4); color: #0F766E; font-weight: bold; border-radius: 9999px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); transition: all 300ms; opacity: 0; visibility: hidden; z-index: 50;">
+        <span data-lucide="chevron-up" class="w-6 h-6"></span>
+    </button>
+
+    <footer class="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-white py-8">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-4 text-yellow-100 text-sm">Antwi VA Max | Operational Clarity</p>
+            <div class="flex justify-center space-x-6 text-yellow-100">
+                <a href="index.html#about" class="hover:text-yellow-300 text-sm">About</a>
+                <a href="index.html#services" class="hover:text-yellow-300 text-sm">Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 text-sm">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-yellow-300 text-sm">Testimonials</a>
+                <a href="index.html#contact" class="hover:text-yellow-300 text-sm">Contact</a>
+            </div>
+            <p class="mt-4 text-xs text-gray-500">&copy; <span id="current-year">2025</span> Antwi VA Max. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Functionality
+        (function(){
+            const btn = document.getElementById('menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function(){
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('hidden');
+                menu.setAttribute('aria-hidden', String(isOpen));
+                const icon = btn.querySelector('[data-lucide]');
+                if (icon) icon.setAttribute('data-lucide', isOpen ? 'menu' : 'x');
+                if (!isOpen) { const f = menu.querySelector('a'); if (f) f.focus(); }
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){
+                    btn.setAttribute('aria-expanded','false');
+                    menu.classList.add('hidden');
+                    menu.setAttribute('aria-hidden','true');
+                    btn.focus();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+

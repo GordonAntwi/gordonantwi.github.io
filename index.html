@@ -1,0 +1,1047 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Antwi VA Max | Operational Clarity, Web Development & Executive Assistance</title>
+    <meta name="description" content="Antwi VA Max delivers elite Executive Virtual Assistant support, specializing in Strategic Time Management, Automation, and Operational Clarity for CEOs and founders. Also offers expert Web Development services." />
+    <link rel="canonical" href="https://gordonantwi.github.io/index.html" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* ... existing body styles ... */
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f9fafb; /* Light background for contrast sections */
+    }
+    
+    /* MODIFIED: This is your main hero section style */
+    #hero {
+        position: relative;
+        min-height: 100vh;
+        
+        /* 1. Set the background image and positioning */
+        background-image: url(images/hero-background.jpg); /* <-- YOUR IMAGE PATH HERE */
+        background-size: cover;          /* Ensures image covers the whole section */
+        background-position: center;     /* Centers the most important part of the image */
+        background-repeat: no-repeat;    /* Prevents the image from tiling */
+
+        /* 2. Apply a dark overlay (Optional but Recommended) */
+        /* This makes the text easier to read over the image */
+        background-color: rgba(0, 0, 0, 0.4); /* Darkens the image */
+        background-blend-mode: overlay;      /* Blends the color with the image */
+        
+        /* (The 3D canvas from Three.js is still running in the background) */
+    }
+    /* You can delete the unused `.hero-background` class now */
+
+</style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f9fafb; /* Light background for contrast sections */
+        }
+        /* Custom height for hero to ensure the 3D canvas fills the screen */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        /* Style for the Three.js Canvas */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        /* Content Overlay */
+        #hero-content {
+            position: relative;
+            z-index: 20;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            max-width: 6xl;
+        }
+        .section-padding {
+            padding: 5rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 7rem 4rem;
+            }
+        }
+        /* Transition for the essay expansion */
+        .essay-transition {
+            transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .essay-transition.expanded {
+            max-height: 2000px; /* Large enough number to contain content */
+            opacity: 1;
+        }
+    </style>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Person",
+          "name":"Antwi VA Max",
+          "jobTitle":"Executive Virtual Assistant | Operational Streamliner",
+          "url":"https://gordonantwi.github.io/index.html",
+          "alumniOf":"University of Ghana",
+          "worksFor":{
+            "@type":"Organization",
+            "name":"Self-Employed"
+          }
+        }
+    </script>
+    
+        <!-- Favicon: Small icon shown in browser tabs -->
+        <!-- Replace with your own favicon files placed in the images/ folder.
+            Recommended sizes: PNG 16x16 or 32x32, or an SVG for vector icons.
+            Examples (uncomment the one you want to use):
+            <link rel="icon" type="image/png" href="images/favicon.png">
+            <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+            <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+        -->
+        <!-- Use PNG as primary favicon (add ?v=1 to force cache refresh when you update) -->
+        <link rel="icon" type="image/png" href="images/logo.png?v=1">
+        <!-- SVG fallback (optional) -->
+        <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+        <!-- Touch icon for iOS/home screen -->
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+</head>
+<body>
+
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center p-4 md:px-8">
+            <!-- Navbar Logo: Replace with your logo image -->
+            <div class="flex items-center flex-shrink-0">
+                <!-- Add your logo here -->
+                <img src="images/logo.png" alt="Antwi VA Max Logo" class="h-10 w-auto mr-3" />
+                <a href="index.html" class="text-2xl font-extrabold text-white flex items-center tracking-wider flex-shrink-0 hover:text-yellow-300 transition">
+                    <span data-lucide="zap" class="w-6 h-6 mr-2 text-yellow-300 drop-shadow-lg"></span>
+                    ANTWI VA MAX
+                </a>
+            </div>
+            <nav class="hidden md:flex flex-grow justify-center">
+                <div class="space-x-6 text-sm font-semibold">
+                    <div class="relative inline-block" id="about-dropdown-container">
+                        <a href="javascript:void(0)" id="about-dropdown-trigger" class="text-yellow-100 hover:text-yellow-300 transition duration-300 font-medium cursor-pointer">About</a>
+                        <div id="about-dropdown-menu" class="absolute left-0 mt-0 w-48 bg-white text-gray-900 rounded-md shadow-lg opacity-0 invisible transition-all duration-200 z-50 border border-gray-200" style="pointer-events: none;">
+                            <a href="index.html#about" class="block px-4 py-2 text-sm hover:bg-gray-100">About Me</a>
+                            <a href="testimonials.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Testimonials</a>
+                            <a href="feedback.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Feedback</a>
+                        </div>
+                    </div>
+                    <a href="index.html#services" class="text-yellow-100 hover:text-yellow-300 transition duration-300 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-yellow-100 hover:text-yellow-300 transition duration-300 font-medium">Portfolio</a>
+                    <a href="blog.html" class="text-yellow-100 hover:text-yellow-300 transition duration-300 font-medium">Insights</a>
+                    <a href="index.html#contact" class="text-yellow-100 hover:text-yellow-300 transition duration-300 font-medium">Contact</a>
+                </div>
+            </nav>
+
+            <div class="hidden md:block flex-shrink-0">
+                <a href="index.html#contact" class="px-4 py-2 bg-gradient-to-r text-white" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4); color: #001f3f; font-weight: bold; border-radius: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); transition: all 0.3s ease; transform-origin: center;" onmouseover="this.style.boxShadow='0 10px 15px rgba(255,0,0,0.5)'; this.style.transform='scale(1.05)'" onmouseout="this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; this.style.transform='scale(1)'">Let's Connect</a>
+            </div>
+
+            <button id="menu-button" class="md:hidden text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <span data-lucide="menu"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-blue-700 to-indigo-600 shadow-md" aria-hidden="true" role="menu">
+            <button type="button" onclick="document.getElementById('mobile-about-submenu').classList.toggle('hidden')" class="w-full text-left py-3 px-6 text-yellow-100 hover:bg-blue-700 flex items-center justify-between">
+                About
+                <span data-lucide="chevron-down" class="w-4 h-4"></span>
+            </button>
+            <div id="mobile-about-submenu" class="hidden bg-blue-600/20">
+                <a href="index.html#about" class="block py-3 pl-10 pr-6 text-yellow-100 hover:bg-blue-700">About Me</a>
+                <a href="testimonials.html" class="block py-3 pl-10 pr-6 text-yellow-100 hover:bg-blue-700">Testimonials</a>
+                <a href="feedback.html" class="block py-3 pl-10 pr-6 text-yellow-100 hover:bg-blue-700">Feedback</a>
+            </div>
+            <a href="index.html#services" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Services</a>
+            <a href="portfolio.html" class="block py-3 px-6 text-yellow-300 font-bold hover:bg-gray-700">Portfolio</a>
+            <a href="blog.html" class="block py-3 px-6 text-yellow-100 hover:bg-blue-700">Insights</a>
+            <a href="index.html#contact" class="block py-3 px-6 text-yellow-300 font-bold hover:bg-gray-700">Let's Connect</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950">
+        <div id="hero-canvas"></div>
+    
+        <div id="hero-content" class="container mx-auto text-center px-4">
+                <div class="inline-flex items-center text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-500 bg-opacity-80 rounded-full py-1 px-4 mb-6 uppercase tracking-wider shadow-xl mx-auto border border-yellow-400">
+                <span data-lucide="briefcase" class="w-4 h-4 mr-2 text-yellow-300"></span>
+                A Problem Solver 
+            </div>
+                <h1 class="text-5xl md:text-5xl font-extrabold leading-tight mb-8">
+                Operational Clarity for High-Impact Leaders</span>
+            </h1>
+            
+           <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 mb-8 p-3 bg-gradient-to-r from-blue-700 to-purple-700 bg-opacity-70 rounded-2xl shadow-xl border-2 border-yellow-400 max-w-lg mx-auto">
+                
+                <p class="text-lg font-bold text-white flex items-center">
+                    <span data-lucide="map-pin" class="w-5 h-5 mr-2 text-yellow-300"></span>
+                    My Time: <strong id="hero-accra-time" class="ml-2 text-yellow-200">Accra, GMT/UTC+0</strong>
+                </p>
+                
+                <p class="text-lg font-bold text-white flex items-center">
+                    <span data-lucide="users" class="w-5 h-5 mr-2 text-yellow-300"></span>
+                    Client Time: <strong id="hero-client-time" class="ml-2 text-yellow-200">Detecting...</strong>
+                </p>
+                
+            </div>
+            
+            <p class="text-xl md:text-2xl text-yellow-100 mb-10 max-w-4xl mx-auto font-light">
+                I help you make your week easier and save time, so you can focus only on the decisions and actions that matter the most.
+            </p>
+            <a href="#about" class="inline-block px-10 py-4 text-xl font-bold rounded-2xl shadow-2xl transition duration-300 transform hover:scale-105 text-white hover:opacity-95" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">
+                Learn My Philosophy
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-gray-100">
+    <div class="container mx-auto max-w-5xl">
+        
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">
+            About Me: The Calm Command Philosophy
+        </h2>
+        
+        <div class="mt-4 mb-10 text-center">
+            <p class="text-sm text-gray-600 mb-2">
+                🎙️ Listen: A short introduction from Antwi VA Max
+            </p>
+            <audio controls class="mx-auto rounded-lg shadow-xl w-full max-w-sm">
+                <source src="audio/antwi-intro.mp3" type="audio/mpeg">
+                Your browser does not support the audio element. <span class="text-red-500 font-semibold">Please check your connection or try another browser.</span>
+            </audio>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 items-start mb-8">
+
+            <div class="w-full mx-auto md:w-full md:mx-0 md:col-span-1 relative">
+                <img src="images/me.png" alt="Professional profile of Antwi Gordon" class="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-300 hover:shadow-3xl" style="min-height: 600px; object-fit: cover; max-width: 600px; margin: 0 auto 0 0;" onerror="this.onerror=null; this.src='https://placehold.co/400x400/3A8DFF/ffffff?text=Antwi+Gordon';" />
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" style="max-width: 800px; margin: 0 auto; left: 0; right: 0;"></div>
+            </div>
+            
+            <div class="md:col-span-2 space-y-5 text-gray-700 text-lg">
+                <p>
+                    My name is <strong>Antwi Gordon</strong>, I hail from Ghana, a place where hard work, warmth, and purpose shape everything we do.
+                </p>
+
+                <p>
+                    My journey led me from marketing and customer service in a boutique shop to becoming an Administrative Assistant at the financial company <strong>Nyame Nanim</strong>. There, I developed a passion for organization and structure, but I sought a deeper purpose: <strong>to help others bring order and calm into their daily lives</strong>.
+                </p>
+
+                <p>
+                    I spent years researching <strong>time management</strong>, only to discover a more powerful truth: I discovered that <strong>time holds no eternity</strong>, yet within it, <strong>I can create the best of moments</strong> — a truth that guided me toward becoming an <strong>Executive Virtual Assistant </strong>—a role that combines my foundation in operations, service, and strategic thinking.
+                </p>
+                <div class="my-8 p-6 bg-gradient-to-r from-blue-50 to-yellow-50 border-l-4 border-red-500 rounded-lg shadow-md text-gray-800">
+                    <p class="text-xl font-extrabold mb-3 text-opacity-80" style="color: #0FB9B1 flex items-center">
+                        <span data-lucide="zap" class="w-6 h-6 mr-3 flex-shrink-0 text-yellow-500"></span>
+                        FULL-TIME FREELANCER
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        This is not a side hustle, it's a <strong>full-time priority</strong>, handled with <strong>focus, consistency, and complete dedication</strong>. 
+                        I take ownership from day one—meeting deadlines, solving challenges proactively, and delivering with <strong>accountability</strong>.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="mt-8 pt-6 border-t border-gray-300 mb-16">
+            <p class="text-gray-700 text-lg mb-6">
+                Today, I dedicate my work to helping <strong>founders, CEOs, and business owners</strong> find peace in their operations. Every task I take on carries <strong>integrity, trust, and heart</strong>, because I believe that real success isn't just in achieving more—it’s in achieving it <strong>calmly and with operational clarity.</strong>
+            </p>
+            <p class="text-xl font-extrabold text-center bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent">
+                What started as a search for how to manage time has become my purpose — to help others make time work. 🌱
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="services" class="section-padding bg-white">
+    <div class="container mx-auto">
+
+        <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">My Dual Expertise</h2>
+        <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto px-4">
+            Combining high-level administrative support with professional technical execution.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="p-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl border-t-4 border-red-500 hover:shadow-2xl transition duration-300 hover:border-yellow-400">
+                <div class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent mb-4">
+                    <span data-lucide="rocket" class="w-10 h-10"></span>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Executive Virtual Assistance</h3>
+                <p class="text-gray-600 mb-6 font-semibold">
+                    Strategic time management, advanced automation, and seamless operational flow for CEOs and founders.
+                </p>
+                <ul class="space-y-3 text-gray-700 text-lg">
+                    <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Advanced Calendar & Email Triage
+                    </li>
+                <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Systems & Process Automation
+                    </li>
+                    <li class="flex items-start">
+                        <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                        Project Coordination & Task Delegation
+                    </li>
+                </ul>
+            </div>
+
+                <div class="p-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl border-t-4 border-yellow-400 hover:shadow-2xl transition duration-300 hover:border-red-500">
+                    <div class="bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent mb-4">
+                        <span data-lucide="layout-grid" class="w-10 h-10"></span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Professional Web Development</h3>
+                    <p class="text-gray-600 mb-6 font-semibold">
+                        Building clean, single-file, highly portable, and fast websites ready for any host environment.
+                    </p>
+                    <ul class="space-y-3 text-gray-700 text-lg">
+                        <li class="flex items-start">
+                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                            Single-File HTML/Tailwind Websites
+                        </li>
+                        <li class="flex items-start">
+                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                            Performance Optimization & SEO Structuring
+                        </li>
+                        <li class="flex items-start">
+                            <span data-lucide="check" class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0"></span>
+                            Quick Deployment & Ongoing Maintenance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="section-padding bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-white">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-4xl font-bold mb-4">Who Benefits from Operational Clarity?</h2>
+                <p class="text-xl text-yellow-100 mb-16 max-w-3xl mx-auto px-4">
+                I partner with ambitious individuals who know the true cost of administrative drag.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="p-6 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl border-b-4 border-opacity-20 border-emerald-600" style="border-bottom-color: rgba(16, 185, 130, 0.15)">
+                    <span data-lucide="crown" class="w-8 h-8 mx-auto mb-3" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">CEOs & Founders</h3>
+                    <p class="text-gray-600">Focusing their time on strategy, fundraising, and leadership, not in their inbox.</p>
+                </div>
+
+                <div class="p-6 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl border-b-4 border-opacity-20 border-emerald-600" style="border-bottom-color: rgba(16, 185, 130, 0.15)">
+                    <span data-lucide="megaphone" class="w-8 h-8 mx-auto mb-3" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Influencers & Creators</h3>
+                    <p class="text-gray-600">Managing complex content schedules and maintaining their public-facing platforms.</p>
+                </div>
+
+                <div class="p-6 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl border-b-4 border-opacity-20 border-emerald-600" style="border-bottom-color: rgba(16, 185, 130, 0.15)">
+                    <span data-lucide="handshake" class="w-8 h-8 mx-auto mb-3" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Small Business Owners</h3>
+                    <p class="text-gray-600">Streamlining internal processes to scale efficiently and professionally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clarity_promise" class="section-padding bg-white">
+        <div class="container mx-auto max-w-4xl text-center border p-10 rounded-2xl shadow-2xl">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">My Promise: Your Week, Easier.</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                You get more than a service provider—you get a partner dedicated to eliminating friction and maximizing your personal bandwidth.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+                <div class="text-center">
+                    <span data-lucide="trending-up" class="w-12 h-12 mx-auto mb-3" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    <h3 class="text-3xl font-extrabold text-gray-900">40+ Hours Saved</h3>
+                    <p class="text-gray-500">Every Month, Reclaimed.</p>
+                </div>
+                <div class="text-center">
+                    <span data-lucide="cpu" class="w-12 h-12 mx-auto mb-3" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    <h3 class="text-3xl font-extrabold text-gray-900">100% Efficiency</h3>
+                    <p class="text-gray-500">Through Automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="insights" class="section-padding bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Key Insights & Blog</h2>
+
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border-t-8" style="border-top-color: rgba(16, 185, 130, 0.15)">
+                <div class="grid md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-2">
+                        <a href="blog.html" class="block group">
+                            <div class="overflow-hidden rounded-lg mb-6">
+                                <img src="images/business-architecture-hero.png" alt="Business architecture pyramid" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/1f2937/f0f4f8?text=Business+Architecture';" />
+                            </div>
+
+                            <p class="mb-2 uppercase tracking-widest font-semibold" style="color: rgba(16, 185, 130, 0.3)">
+                                Built for Tomorrow | Oct 2025
+                            </p>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">Business Architecture for Tomorrow ( BAT )</h3>
+                            <p class="text-md text-gray-500 mb-4 italic">By Antwi Gordon</p>
+
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Most businesses don’t fail because they lack ambition. They fail because they grow in ways their structure cannot hold. We live in an age that celebrates more — more sales, more reach, more speed. But more, without architecture, makes things weaker.
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="md:col-span-1 flex flex-col items-start justify-center">
+                        <a href="blog.html" class="inline-block px-6 py-3 rounded-lg text-white font-bold shadow-lg transition duration-300 hover:opacity-95" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4)">
+                            Read All Insights
+                        </a>
+
+                        <a href="blog-business-architecture.html" class="mt-4 text-sm text-gray-600 hover:text-blue-700">
+                            Read this article →
+                        </a>
+                    </div>
+                </div>
+
+
+                </div>
+
+                <div class="mt-8">
+                    <button id="read-more-button" class="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition duration-300">
+                        <span data-lucide="chevron-down" class="w-5 h-5 ml-2"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="contact" class="section-padding bg-gradient-to-br from-blue-50 to-white">
+        <div class="container mx-auto max-w-5xl grid md:grid-cols-2 gap-10">
+            
+            <div>
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">Ready to Delegate?</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Start a conversation about your needs—whether administrative, technical, or strategic.
+                </p>
+                <a href="mailto:antwivamax@gmail.com" class="inline-block px-8 py-3 font-bold rounded-lg shadow-xl transition duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, #0FB9B1 0%, #06b6d4 100%); color: white;">
+                    <span data-lucide="mail" class="inline-block w-5 h-5 mr-2"></span>
+                    Email Me Directly
+                </a>
+                <p class="text-gray-500 mt-6 text-sm">
+                    My current timezone: <strong id="accra-time" class="text-gray-900 text-base"></strong>
+                </p>
+
+                <p class="text-gray-500 mt-2 text-sm">
+                    Client's local time: <strong id="client-time" class="text-gray-900 text-base">N/A</strong>
+                </p>
+                
+                <div class="flex flex-col space-y-3 mt-8">
+
+                    
+                    <a href="https://calendly.com/gordonantwi62/book-a-call-with-antwi-va-max" target="_blank" class="inline-flex items-center font-semibold transition duration-300 hover:text-opacity-80" style="color: #0FB9B1;">
+                        <span data-lucide="calendar" class="w-5 h-5 mr-3"></span>
+                        Book a Clarity Call (Calendly)
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/antwi-gordon-02a74a271" target="_blank" class="inline-flex items-center text-gray-700 font-semibold transition duration-300 hover:text-teal-500">
+                        <span data-lucide="linkedin" class="w-5 h-5 mr-3"></span>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-2xl">
+                
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-gray-900 flex items-center">
+                    <span data-lucide="message-square" class="w-6 h-6 mr-2" style="color: rgba(16, 185, 130, 0.3)"></span>
+                    Antwi AI Assistant
+                </h3>
+                <p class="text-gray-600 mb-4 text-sm">
+                    Ask me anything about Antwi VA Max's services or schedule availability.
+                </p>
+                
+                <div id="chatBox" class="max-h-64 overflow-y-auto border p-4 rounded-lg space-y-2" style="border-color: #0FB9B1; background-color: rgba(15, 185, 177, 0.05)">
+                    <div class="flex justify-start">
+                        <div class="p-3 rounded-xl rounded-tl-none max-w-xs text-sm" style="background-color: rgba(15, 185, 177, 0.15); color: #1a5f5a">
+                            Hello! I am the Antwi VA Max AI Assistant. How can I help you streamline your work today?
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="ai-fallback-form" class="hidden mt-4 p-4 bg-white rounded-lg border border-red-300">
+    <p class="text-opacity-80" style="color: #0FB9B1 font-semibold mb-3 flex items-center">
+        <span data-lucide="alert-triangle" class="w-5 h-5 mr-2"></span>
+        Service Interruption: Please use this direct form.
+    </p>
+    
+    <form id="fallbackForm" action="https://formspree.io/f/mblzeovd" method="POST" class="space-y-3">
+        <input type="text" name="name" placeholder="Antwi VA Max" required class="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm">
+        <input type="email" name="_replyto" placeholder="antwivamax@gmail.com" required class="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm">
+        <textarea name="message" rows="3" placeholder="Your Question (will be sent to Antwi)" required class="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm"></textarea>
+        <button type="submit" class="w-full px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition duration-300">Send Question Directly</button>
+    </form>
+</div>
+
+                <div id="chat-loading" class="hidden text-center mt-2 text-sm text-blue-600">
+                    <span class="inline-block animate-spin rounded-full h-4 w-4 border-2 border-t-2 border-blue-600 border-t-transparent mr-2"></span>
+                    Thinking...
+                </div>
+                
+                <form id="chatForm" class="mt-4 flex">
+                    <input id="userInput" type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-blue-500 focus:border-blue-500 text-sm">
+                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-r-lg font-semibold text-sm hover:bg-blue-700 transition duration-300">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-yellow-100 py-12 border-t border-opacity-30" style="border-color: rgba(16,185,130,0.06)">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-4 text-yellow-100 text-sm">
+                Antwi VA Max | Operational Clarity and Expert Web Development
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="index.html#about" class="text-yellow-100 hover:text-yellow-300 text-sm">About</a>
+                <a href="index.html#services" class="text-yellow-100 hover:text-yellow-300 text-sm">Services</a>
+                <a href="portfolio.html" class="text-yellow-100 hover:text-yellow-300 text-sm">Portfolio</a>
+                <a href="testimonials.html" class="text-yellow-100 hover:text-yellow-300 text-sm">Testimonials</a>
+                <a href="index.html#contact" class="text-yellow-100 hover:text-yellow-300 text-sm">Contact</a>
+            </div>
+            <p class="mt-4 text-xs text-yellow-200">
+                &copy; <span id="current-year"></span> Antwi VA Max. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCROLL-TO-TOP BUTTON -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 text-white rounded-full shadow-xl transition-all duration-300 opacity-0 invisible z-50 transform hover:scale-110" style="background: linear-gradient(135deg, #0FB9B1 0%, #06b6d4 100%)">
+        <span data-lucide="chevron-up" class="w-6 h-6"></span>
+    </button>
+
+   <script>
+        // ===========================================
+        // SCROLL TO TOP FUNCTIONALITY
+        // ===========================================
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            // Show button when scrolled down 500px
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ===========================================
+        // GEMINI API CONSTANTS
+        // ===========================================
+        const apiKey = ""; // Canvas will automatically replace this
+        const CHAT_MODEL = "AIzaSyBQc5ZuXUyJ_Fh2Gdcq9koh6HLgc7x7UdU";
+        const CHAT_URL = `https://generativelanguage.googleapis.com/v1beta/models/${CHAT_MODEL}:generateContent?key=${apiKey}`;
+        const SYSTEM_INSTRUCTION = "You are Antwi AI Assistant, a professional and concise executive virtual assistant specialized in operational clarity, web development, and time management. Keep responses brief, helpful, and highly professional. Do not write code. If a user asks about scheduling, suggest emailing the executive directly.";
+
+        // ===========================================
+        // INITIAL SETUP (3D, Clock, UI)
+        // ===========================================
+        
+        // Mobile Menu Toggle
+        document.getElementById('menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-button').querySelector('[data-lucide]');
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('menu-button').querySelector('[data-lucide]').setAttribute('data-lucide', 'menu');
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            });
+        });
+
+        // ===========================================
+        // ABOUT DROPDOWN STABLE HOVER HANDLER
+        // ===========================================
+        let aboutDropdownTimeout;
+        const aboutContainer = document.getElementById('about-dropdown-container');
+        const aboutTrigger = document.getElementById('about-dropdown-trigger');
+        const aboutMenu = document.getElementById('about-dropdown-menu');
+
+        function openAboutDropdown() {
+            clearTimeout(aboutDropdownTimeout);
+            aboutMenu.classList.remove('opacity-0', 'invisible');
+            aboutMenu.style.pointerEvents = 'auto';
+        }
+
+        function closeAboutDropdown() {
+            aboutDropdownTimeout = setTimeout(() => {
+                aboutMenu.classList.add('opacity-0', 'invisible');
+                aboutMenu.style.pointerEvents = 'none';
+            }, 200); // 200ms delay before closing
+        }
+
+        aboutTrigger.addEventListener('mouseenter', openAboutDropdown);
+        aboutTrigger.addEventListener('mouseleave', () => {
+            // Only close if mouse is not over the menu
+            if (!aboutMenu.matches(':hover')) {
+                closeAboutDropdown();
+            }
+        });
+
+        aboutMenu.addEventListener('mouseenter', openAboutDropdown);
+        aboutMenu.addEventListener('mouseleave', closeAboutDropdown);
+
+        // Close menu when clicking on a link
+        aboutMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeAboutDropdown);
+        });
+        
+        // ===========================================
+        // INSIGHTS COLLAPSE FUNCTION
+        // ===========================================
+        const essayBody = document.getElementById('essay-body');
+        const readMoreButton = document.getElementById('read-more-button');
+
+        readMoreButton.addEventListener('click', () => {
+            const isExpanded = essayBody.classList.toggle('expanded');
+            
+            readMoreButton.querySelector('span:last-child').setAttribute('data-lucide', isExpanded ? 'chevron-up' : 'chevron-down');
+            readMoreButton.childNodes[0].nodeValue = isExpanded ? 'Read Less' : 'Read More';
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // ===========================================
+        // TIMEZONE CLOCK FUNCTION (UPDATED FOR HERO BANNER)
+        // ===========================================
+        
+        function updateTimezoneClock() {
+            try {
+                const now = new Date();
+                
+                // 1. Accra Time (Your Time)
+                const accraOptions = { 
+                    timeZone: 'Africa/Accra', 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit', 
+                    hour12: true 
+                };
+                const accraTimeStr = now.toLocaleTimeString('en-US', accraOptions);
+                
+                // Update Contact Section Clock
+                const accraContactElement = document.getElementById('accra-time');
+                if (accraContactElement) {
+                    accraContactElement.textContent = `Accra, Ghana (${accraTimeStr})`;
+                }
+
+                // NEW: Update HERO ACCRA Time
+                const heroAccraElement = document.getElementById('hero-accra-time');
+                if (heroAccraElement) {
+                    heroAccraElement.textContent = `GMT/UTC+0 (${accraTimeStr})`;
+                }
+                
+                // 2. Client Time (Visitor's Local Time)
+                const clientTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                const clientOptions = { 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit', 
+                    hour12: true 
+                };
+                const clientTimeStr = now.toLocaleTimeString('en-US', clientOptions);
+                
+                // Format the output (e.g., 'New York (04:37:39 PM)')
+                const clientTimeZoneName = clientTimeZone.split('/').pop().replace('_', ' ');
+                const clientOutput = `${clientTimeZoneName} (${clientTimeStr})`;
+                
+                // Update Contact Section Client Time
+                const clientContactElement = document.getElementById('client-time');
+                if (clientContactElement) {
+                    clientContactElement.textContent = clientOutput;
+                }
+
+                // NEW: Update HERO CLIENT Time
+                const heroClientElement = document.getElementById('hero-client-time');
+                if (heroClientElement) {
+                    heroClientElement.textContent = clientOutput;
+                }
+
+            } catch (error) {
+                console.error("Error updating clock:", error);
+            }
+        }
+
+        // ===========================================
+        // THREE.JS ANIMATION (Kept from original code)
+        // ===========================================
+
+        let scene, camera, renderer, particleSystem, animationFrameId;
+        function initThreeJS() {
+            const container = document.getElementById('hero-canvas');
+            if (!container) return;
+            
+            // Scene Setup
+            scene = new THREE.Scene();
+            // Camera Setup
+            camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.z = 50;
+
+            // Renderer Setup
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            // Particle Geometry and Material
+            const particleCount = 2000;
+            const geometry = new THREE.BufferGeometry();
+            const positions = new Float32Array(particleCount * 3);
+            const colors = new Float32Array(particleCount * 3);
+            const color = new THREE.Color();
+            
+            for (let i = 0; i < particleCount; i++) {
+                // Position particles randomly in a cube
+                positions[i * 3] = (Math.random() - 0.5) * 200;
+                positions[i * 3 + 1] = (Math.random() - 0.5) * 200;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 200;
+                // Assign a color (subtle blue to white gradient)
+                color.setHSL(0.6 + Math.random() * 0.1, 0.7, 0.5 + Math.random() * 0.5);
+                colors[i * 3] = color.r;
+                colors[i * 3 + 1] = color.g;
+                colors[i * 3 + 2] = color.b;
+            }
+
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            // Material for particles
+            const material = new THREE.PointsMaterial({
+                size: 0.2,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8
+            });
+            // Create the particle system
+            particleSystem = new THREE.Points(geometry, material);
+            scene.add(particleSystem);
+            
+            // Event listener for window resizing
+            window.addEventListener('resize', onWindowResize, false);
+            // Start the animation loop
+            animate();
+        }
+
+        function onWindowResize() {
+            const container = document.getElementById('hero-canvas');
+            if (!container) return;
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+
+        function animate() {
+            animationFrameId = requestAnimationFrame(animate);
+            // Rotate the particle system slowly to give it a sense of motion
+            if (particleSystem) {
+                particleSystem.rotation.x += 0.0005;
+                particleSystem.rotation.y += 0.001;
+            }
+            
+            // Add a slow camera drift for a subtle parallax effect
+            camera.position.x = Math.sin(Date.now() * 0.00005) * 5;
+            camera.position.y = Math.cos(Date.now() * 0.00005) * 5;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        // ===========================================
+
+        // CHATBOT FUNCTIONALITY (Kept from original code)
+
+        // ===========================================
+
+
+
+        const chatBox = document.getElementById('chatBox');
+
+        const chatForm = document.getElementById('chatForm');
+
+        const userInput = document.getElementById('userInput');
+
+        const chatLoading = document.getElementById('chat-loading');
+
+        // Utility function to add a message to the chat box
+
+        function addMessage(text, isUser = false) {
+
+            const messageContainer = document.createElement('div');
+
+            messageContainer.className = `flex ${isUser ? 'justify-end' : 'justify-start'}`;
+
+
+
+            const messageBubble = document.createElement('div');
+
+            messageBubble.className = `p-3 rounded-2xl max-w-xs text-sm ${
+
+                isUser 
+
+                ? 'text-white rounded-br-none' 
+
+                : 'text-gray-900 rounded-tl-none'
+
+            }`;
+            
+            if (isUser) {
+                messageBubble.style.background = 'linear-gradient(135deg, #0FB9B1 0%, #06b6d4 100%)';
+            } else {
+                messageBubble.style.backgroundColor = 'rgba(15, 185, 177, 0.15)';
+            }
+
+            // Simple markdown-to-html conversion for bold/newlines
+
+            const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+
+            messageBubble.innerHTML = formattedText;
+
+            
+
+            messageContainer.appendChild(messageBubble);
+
+            chatBox.appendChild(messageContainer);
+
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+
+        }
+
+
+
+        // Exponential backoff for API calls
+
+        async function callGeminiAPI(payload, maxRetries = 3) {
+
+            for (let attempt = 0; attempt < maxRetries; attempt++) {
+
+                try {
+
+                    const response = await fetch(CHAT_URL, {
+
+                        method: 'POST',
+
+                        headers: { 'Content-Type': 'application/json' },
+
+                        body: JSON.stringify(payload)
+
+                    });
+
+
+
+                    if (response.ok) {
+
+                        return response.json();
+
+                    } else if (response.status === 429 && attempt < maxRetries - 1) {
+
+                        // Too Many Requests, implement exponential backoff
+
+                        const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+
+                        await new Promise(resolve => setTimeout(resolve, delay));
+
+                        continue; // Retry
+
+                    } else {
+
+                        throw new Error(`API call failed with status: ${response.status}`);
+
+                    }
+
+                } catch (error) {
+
+                    if (attempt === maxRetries - 1) throw error;
+
+                }
+
+            }
+
+        }
+
+
+
+       async function handleChatSubmission(event) {
+
+            event.preventDefault();
+
+            const prompt = userInput.value.trim();
+
+            if (!prompt) return;
+
+
+
+            addMessage(prompt, true); // Display user message
+
+            userInput.value = ''; // Clear input
+
+            
+
+            chatLoading.classList.remove('hidden'); // Show loading indicator
+
+            
+
+            // Disable inputs while waiting for response
+
+            userInput.disabled = true;
+
+            chatForm.querySelector('button').disabled = true;
+
+
+
+            const payload = {
+
+                contents: [{ parts: [{ text: prompt }] }],
+
+                systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
+
+                config: { temperature: 0.5 } 
+
+            };
+
+            
+
+            try {
+
+                const result = await callGeminiAPI(payload);
+
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I encountered an issue fetching a response. Please check the console for details.";
+
+                
+
+                // If the API call worked, check if the response is an empty or generic error that indicates failure
+
+                // This is the key logic that forces the fallback if the AI isn't replying properly.
+
+                if (!text || text.toLowerCase().includes("sorry, i encountered an issue") || text.toLowerCase().includes("unable to connect to the ai service")) {
+
+                     throw new Error("AI Service Response Error or Failure");
+
+                }
+
+                
+
+                addMessage(text, false);
+
+
+
+            } catch (error) {
+
+                console.error("Gemini API Error or Timeout:", error);
+
+                
+
+                // === NEW FALLBACK LOGIC: ON FAILURE, DISPLAY FORM ===
+
+                
+
+                // 1. Display the error message in the chat window
+
+                addMessage("I'm sorry, I'm experiencing a service interruption. I've opened a direct contact form below so your question goes straight to Antwi.", false);
+
+                
+
+                // 2. Hide the live chat input and show the fallback form
+
+                document.getElementById('chatForm').classList.add('hidden');
+
+                document.getElementById('ai-fallback-form').classList.remove('hidden');
+
+                
+
+            } finally {
+
+                chatLoading.classList.add('hidden'); // Hide loading indicator
+
+                
+
+                // Only re-enable the chat form if the fallback hasn't been activated
+
+                if (!document.getElementById('ai-fallback-form').classList.contains('hidden')) {
+
+                    // Fallback is active, do nothing to the form inputs
+
+                } else {
+
+                    userInput.disabled = false;
+
+                    chatForm.querySelector('button').disabled = false;
+
+                    userInput.focus();
+
+                }
+
+            }
+
+        }
+
+        // ===========================================
+        // INITIALIZATION (CORRECTED)
+        // ===========================================
+
+        function initPage() {
+            // 1. Initialize Lucide Icons and Footer Year
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // 2. Start Timezone Clock updates
+            updateTimezoneClock(); // Show time immediately
+            setInterval(updateTimezoneClock, 1000); // Update every second
+            
+
+            // 4. Initialize Chatbot Listener
+            chatForm.addEventListener('submit', handleChatSubmission);
+        }
+
+        // Ensure everything runs after the window loads
+        window.onload = initPage;
+    </script>
+</body>
+</html>
+
+

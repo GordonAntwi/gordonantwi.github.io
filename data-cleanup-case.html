@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification & Data Cleanup Sample</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Very light blue-gray background */
+            color: #1f2937;
+        }
+        /* Primary Navy Color */
+        .primary-color-bg { background-color: #054F77; }
+        .primary-color-text { color: #054F77; }
+        .primary-color-border { border-color: #054F77; }
+
+        /* Icon Styling (Tailwind utility classes are preferred, but custom color for consistency) */
+        .tool-icon {
+            color: #054F77;
+            font-size: 2.5rem;
+        }
+
+        .shadow-data {
+            box-shadow: 0 10px 15px -3px rgba(5, 79, 119, 0.1), 0 4px 6px -2px rgba(5, 79, 119, 0.05);
+        }
+        .section-padding { padding: 4rem 1.5rem; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="container mx-auto px-4 py-8">
+        
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200 mb-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="text-lg font-extrabold text-gray-900">Antwi VA Max</a>
+                    <a href="portfolio.html" class="inline-flex items-center text-gray-600 hover:text-yellow-600 transition-colors text-sm font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Back to Case Studies
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex flex-grow justify-center">
+                    <div class="space-x-6 text-sm font-semibold">
+                        <a href="index.html#about" class="text-gray-600 hover:text-yellow-600 transition duration-300">About</a>
+                        <a href="index.html#services" class="text-gray-600 hover:text-yellow-600 transition duration-300">Services</a>
+                        <a href="portfolio.html" class="text-yellow-300 font-bold transition duration-300" aria-current="page">Portfolio</a>
+                        <a href="testimonials.html" class="text-gray-600 hover:text-yellow-600 transition duration-300">Testimonials</a>
+                        <a href="index.html#contact" class="text-gray-600 hover:text-yellow-600 transition duration-300">Contact</a>
+                    </div>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="menu-button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open main menu" class="text-gray-700 hover:text-yellow-600 focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" role="menu" aria-hidden="true" class="hidden md:hidden absolute top-full left-0 right-0 bg-white z-50 shadow-lg p-4 border-t border-gray-200">
+                <div class="space-y-2 text-center">
+                    <a href="index.html#about" class="block py-2 text-gray-700 hover:bg-gray-100 rounded transition duration-300">About</a>
+                    <a href="index.html#services" class="block py-2 text-gray-700 hover:bg-gray-100 rounded transition duration-300">Services</a>
+                    <a href="portfolio.html" class="block py-2 text-yellow-300 font-bold hover:bg-gray-100 rounded transition duration-300">Portfolio</a>
+                    <a href="testimonials.html" class="block py-2 text-gray-700 hover:bg-gray-100 rounded transition duration-300">Testimonials</a>
+                    <a href="index.html#contact" class="block py-2 text-gray-700 hover:bg-gray-100 rounded transition duration-300">Contact</a>
+                </div>
+            </div>
+    </header>
+
+        <section class="bg-white p-6 md:p-12 rounded-2xl shadow-2xl border-t-8 primary-color-border">
+            <p class="text-sm font-semibold primary-color-text uppercase tracking-widest mb-3">Case Study 03</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Data Verification & Cleanup for <span class="primary-color-text">High-Value Outreach</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl">
+                A client needed to prepare a list of 2,000+ contacts for an urgent cold outreach campaign, but the data was messy and outdated, risking a high bounce rate and domain damage.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center border-t border-b border-gray-200 py-4">
+                <div>
+                    <p class="text-2xl font-bold primary-color-text">2,100+</p>
+                    <p class="text-sm text-gray-500">Total Contacts Cleaned</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold primary-color-text">4 Days</p>
+                    <p class="text-sm text-gray-500">Project Completion</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold primary-color-text">0%</p>
+                    <p class="text-sm text-gray-500">Guaranteed Bounce Rate</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold primary-color-text">100%</p>
+                    <p class="text-sm text-gray-500">Data Verified</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="section-padding">
+            <h2 class="text-3xl font-bold mb-6 primary-color-text">The Challenge: Dirty Data & Domain Risk</h2>
+            <div class="space-y-6 text-lg text-gray-700">
+                <p>The provided database was a mixture of old records and unverified leads. Launching a campaign with this list would not only waste time but could seriously harm the client's <span class="text-yellow-300 font-semibold">sender reputation</span> by generating an unacceptably high bounce rate.</p>
+                <p>The client required absolute assurance that the final list was clean, enriched with relevant job titles, and ready for immediate deployment without causing domain damage.</p>
+            </div>
+            
+            <div class="my-8 text-center">
+                <img src="images/data-cleanup-spreadsheet.png" alt="Screenshot of a cleaned spreadsheet showing verified emails and confirmed job titles." class="w-full max-w-2xl mx-auto rounded-lg shadow-xl border border-gray-300" loading="lazy">
+                <p class="text-sm text-gray-500 mt-2"><span class="text-yellow-300 font-semibold">Figure 1.1: The Final Enriched Dataset.</span> A screenshot of the master <span class="text-yellow-300 font-semibold">spreadsheet</span>, showing the clean, <em>filtered</em> output with the confirmed <span class="text-yellow-300 font-semibold">Title</span> and technically <span class="text-yellow-300 font-semibold">Verified Email</span> columns ready for immediate campaign launch.</p>
+            </div>
+            </section>
+
+        <section id="solution" class="section-padding bg-white rounded-2xl shadow-data">
+            <h2 class="text-3xl font-bold mb-6 primary-color-text">My Solution: Verification & Enrichment Pipeline</h2>
+            
+            <div class="space-y-8 text-lg text-gray-700">
+                <div class="flex items-start">
+                    <span class="text-2xl primary-color-text font-extrabold mr-4">1.</span>
+                    <p><strong>Initial Data Scrub:</strong> Used Google Sheets and custom formulas to eliminate duplicates, re-format inconsistencies, and normalize all names and company names.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl primary-color-text font-extrabold mr-4">2.</span>
+                    <p><strong>Email Verification (The 0% Bounce Assurance):</strong> Utilized a professional <span class="text-yellow-300 font-semibold">email verification tool</span> to check every single address, categorizing them into <em>deliverable</em>, <em>risky</em>, and <em>undeliverable</em>. Only <span class="text-yellow-300 font-semibold">deliverable</span> contacts were kept.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl primary-color-text font-extrabold mr-4">3.</span>
+                    <p><strong>Data Enrichment:</strong> Manually and semi-automatically researched the remaining contacts to confirm their current <span class="text-yellow-300 font-semibold">Job Title</span> and <span class="text-yellow-300 font-semibold">LinkedIn Profile</span> to ensure the cold outreach was highly personalized and targeted.</p>
+                </div>
+            </div>
+
+            <div class="my-8 text-center">
+                <img src="images/zero-bounce-report.png" alt="A dashboard view confirming 0% bounce rate after email verification." class="w-full max-w-2xl mx-auto rounded-lg shadow-xl border border-gray-300" loading="lazy">
+                <p class="text-sm text-gray-500 mt-2"><span class="text-yellow-300 font-semibold">Figure 2.1: The Verification Assurance Report.</span> A dashboard view of the final list quality, clearly displaying a <span class="text-yellow-300 font-semibold">0% Bounce Rate</span> assurance, which protects the client's sender reputation and guarantees a successful campaign.</p>
+            </div>
+            </section>
+
+        <section id="skills" class="section-padding text-center">
+            <h3 class="text-2xl font-bold mb-8 primary-color-text">Core Tools Used</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="p-4 bg-white rounded-lg shadow-data w-32">
+                    <p class="text-3xl mb-1">✅</p>
+                    <p class="text-sm font-semibold text-gray-700">Email Verification Tools</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-data w-32">
+                    <p class="text-3xl mb-1">🔗</p>
+                    <p class="text-sm font-semibold text-gray-700">LinkedIn Research</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-data w-32">
+                    <p class="text-3xl mb-1">📈</p>
+                    <p class="text-sm font-semibold text-gray-700">Google Sheets/Excel</p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow-data w-32">
+                    <p class="text-3xl mb-1">🌐</p>
+                    <p class="text-sm font-semibold text-gray-700">Web Scraping Utils</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary-cta" class="primary-color-bg text-white p-12 rounded-xl shadow-xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Result Summary & Commitment</h2>
+            <p class="text-xl font-medium mb-6">Accuracy rate: <span class="text-yellow-300 font-semibold">100% verified</span> for all successful additions; Non-available emails clearly marked as <span class="text-yellow-300 font-semibold">N/A</span>.</p>
+            
+            <hr class="max-w-xs mx-auto border-t border-white opacity-30 mb-8">
+            
+            <p class="text-2xl font-extrabold mb-6">Looking for a detail-oriented researcher to handle your next data cleanup or enrichment project?</p>
+            <a href="mailto:antwivamax@gmail.com?subject=Inquiry: Data Cleanup Portfolio Review" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg shadow-2xl hover:bg-gray-100 transition-colors transform hover:scale-105">
+                Let’s Connect
+            </a>
+        </section>
+
+    </main>
+
+    <!-- SCROLL-TO-TOP BUTTON -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 bg-gradient-to-r text-white" style="background: linear-gradient(135deg, #0FB9B1, #06b6d4) text-blue-900 font-bold rounded-full shadow-xl transition-all duration-300 opacity-0 invisible z-50 hover:bg-blue-500 transform hover:scale-110">
+        <span data-lucide="chevron-up" class="w-6 h-6"></span>
+    </button>
+
+    <footer class="bg-gradient-to-r from-blue-950 via-blue-900 to-slate-900 text-white py-8">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-4 text-yellow-100 text-sm">Antwi VA Max | Operational Clarity</p>
+            <div class="flex justify-center space-x-6 text-yellow-100">
+                <a href="index.html#about" class="hover:text-yellow-300 text-sm">About</a>
+                <a href="index.html#services" class="hover:text-yellow-300 text-sm">Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 text-sm">Portfolio</a>
+                <a href="testimonials.html" class="hover:text-yellow-300 text-sm">Testimonials</a>
+                <a href="index.html#contact" class="hover:text-yellow-300 text-sm">Contact</a>
+            </div>
+            <p class="mt-4 text-xs text-gray-500">&copy; <span id="current-year">2025</span> Antwi VA Max. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            // Show button when scrolled down 500px
+            if (window.scrollY > 500) {
+                scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile Menu Functionality
+        (function(){
+            const btn = document.getElementById('menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function(){
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', String(!isOpen));
+                menu.classList.toggle('hidden');
+                menu.setAttribute('aria-hidden', String(isOpen));
+                const icon = btn.querySelector('[data-lucide]');
+                if (icon) icon.setAttribute('data-lucide', isOpen ? 'menu' : 'x');
+                if (!isOpen) { const f = menu.querySelector('a'); if (f) f.focus(); }
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){
+                    btn.setAttribute('aria-expanded','false');
+                    menu.classList.add('hidden');
+                    menu.setAttribute('aria-hidden','true');
+                    btn.focus();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
